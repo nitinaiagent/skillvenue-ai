@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="44 36 458 412" width="458" height="412">
+  <defs>
+    <linearGradient id="body" x1="85" y1="0" x2="460" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14B8A6"/>
+      <stop offset="0.18" stop-color="#5E8FA8"/>
+      <stop offset="0.36" stop-color="#D04881"/>
+      <stop offset="0.56" stop-color="#8863FC"/>
+      <stop offset="0.76" stop-color="#6390FB"/>
+      <stop offset="0.9" stop-color="#51A7FD"/>
+      <stop offset="1" stop-color="#A6D2FC"/>
+    </linearGradient>
+    <linearGradient id="bottom" x1="99" y1="0" x2="446" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14B8A6"/>
+      <stop offset="0.12" stop-color="#8EE3D6"/>
+      <stop offset="0.5" stop-color="#EEB1EA"/>
+      <stop offset="0.85" stop-color="#B7C9FA"/>
+      <stop offset="1" stop-color="#A6D2FC"/>
+    </linearGradient>
+    <linearGradient id="ant" x1="240" y1="0" x2="312" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C04FB8"/>
+      <stop offset="1" stop-color="#8A5CFF"/>
+    </linearGradient>
+    <linearGradient id="eyeL" x1="178" y1="0" x2="238" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E04A78"/>
+      <stop offset="1" stop-color="#B8458F"/>
+    </linearGradient>
+    <linearGradient id="eyeR" x1="305" y1="0" x2="365" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7B5CFF"/>
+      <stop offset="1" stop-color="#4AA8FF"/>
+    </linearGradient>
+    <linearGradient id="fadeV" x1="0" y1="300" x2="0" y2="410" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="m" maskUnits="userSpaceOnUse" x="0" y="0" width="600" height="600">
+      <rect x="0" y="0" width="600" height="600" fill="url(#fadeV)"/>
+    </mask>
+  </defs>
+  <rect x="262" y="112" width="26" height="80" fill="#A055D0"/>
+  <circle cx="275" cy="86" r="37" fill="url(#ant)"/>
+  <path d="M99 260 A38 38 0 0 0 99 336 Z" fill="#14B8A6"/>
+  <path d="M446 260 A38 38 0 0 1 446 336 Z" fill="#CDE2FA"/>
+  <rect x="99" y="184" width="347" height="232" rx="58" fill="none" stroke="url(#body)" stroke-width="28"/>
+  <rect x="99" y="184" width="347" height="232" rx="58" fill="none" stroke="url(#bottom)" stroke-width="28" mask="url(#m)"/>
+  <circle cx="208" cy="298" r="31" fill="url(#eyeL)"/>
+  <circle cx="335" cy="298" r="31" fill="url(#eyeR)"/>
+</svg>

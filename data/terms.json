@@ -1,0 +1,3262 @@
+{
+  "updated": "2026-09-29",
+  "categories": [
+    "Foundations",
+    "Models & Architecture",
+    "Using LLMs",
+    "Prompting & Context",
+    "Training & Fine-Tuning",
+    "RAG & Knowledge",
+    "AI Agents",
+    "Agent Infrastructure & Protocols",
+    "AI Coding",
+    "Infrastructure & Hardware",
+    "Multimodal & Physical AI",
+    "Evaluation & Safety",
+    "Business, Work & Careers",
+    "Policy & Society",
+    "Ecosystem: Tools & Players"
+  ],
+  "terms": [
+    {
+      "id": "artificial-intelligence-ai",
+      "t": "Artificial Intelligence (AI)",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "The broad field of building computer systems that perform tasks normally associated with human intelligence, such as understanding language, recognising images, or making decisions. Every other term in this catalogue sits somewhere under this umbrella.",
+      "e": "ML, deep learning and LLMs are all subsets of AI."
+    },
+    {
+      "id": "machine-learning-ml",
+      "t": "Machine Learning (ML)",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "A branch of AI where systems learn patterns from data instead of following hand-written rules. The more good examples they see, the better their predictions get.",
+      "e": "A spam filter that learns from millions of emails labelled 'spam' or 'not spam'."
+    },
+    {
+      "id": "deep-learning",
+      "t": "Deep Learning",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "Machine learning using neural networks with many layers. It powers modern speech recognition, image generation and language models.",
+      "e": "Why your phone transcribes voice notes accurately."
+    },
+    {
+      "id": "neural-network",
+      "t": "Neural Network",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "A computing structure loosely inspired by the brain: layers of connected 'neurons' that pass numbers to each other. Training adjusts the strength of every connection until the network produces useful outputs.",
+      "e": "Millions of tiny dials tuned until the answer comes out right."
+    },
+    {
+      "id": "generative-ai-genai",
+      "t": "Generative AI (GenAI)",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "AI that creates new content, such as text, images, audio, video or code, rather than only classifying or predicting. ChatGPT, Claude, Gemini and Midjourney are all generative AI.",
+      "e": "Traditional AI: 'Is this a cat?' GenAI: 'Draw me a cat.'"
+    },
+    {
+      "id": "traditional-predictive-ai",
+      "t": "Traditional / Predictive AI",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "AI that classifies, scores or forecasts from data rather than generating new content. It still runs most fraud detection, recommendations and demand forecasting.",
+      "e": "A bank model scoring a loan application's risk."
+    },
+    {
+      "id": "supervised-learning",
+      "t": "Supervised Learning",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "Training a model on examples that come with the correct answer (labels). The model learns to map inputs to the right outputs.",
+      "e": "Photos labelled 'dog' or 'cat' teach an image classifier."
+    },
+    {
+      "id": "unsupervised-learning",
+      "t": "Unsupervised Learning",
+      "c": "Foundations",
+      "l": "P",
+      "s": "est",
+      "d": "Training on data without labels so the model discovers structure on its own, such as clusters or patterns. Useful when labelling is too expensive.",
+      "e": "Grouping customers into segments by buying behaviour."
+    },
+    {
+      "id": "self-supervised-learning",
+      "t": "Self-Supervised Learning",
+      "c": "Foundations",
+      "l": "P",
+      "s": "est",
+      "d": "Learning where the data provides its own labels, for example hiding a word and predicting it. This is how LLMs learn from raw internet text without human labelling.",
+      "e": "Predict the next word, billions of times."
+    },
+    {
+      "id": "reinforcement-learning-rl",
+      "t": "Reinforcement Learning (RL)",
+      "c": "Foundations",
+      "l": "P",
+      "s": "est",
+      "d": "Training by trial and error: an agent takes actions, receives rewards or penalties, and learns a strategy that maximises reward. It is now central to training reasoning models and agents.",
+      "e": "AlphaGo learning to beat world champions at Go."
+    },
+    {
+      "id": "training",
+      "t": "Training",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "The expensive phase where a model learns from large amounts of data by repeatedly adjusting its weights to reduce errors. Frontier model training runs cost hundreds of millions of dollars in compute.",
+      "e": "Years of medical school for a model."
+    },
+    {
+      "id": "inference",
+      "t": "Inference",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "Using a trained model to produce an output for a new input. Every chat message you send triggers inference, and inference is now the bulk of AI's ongoing cost.",
+      "e": "The trained doctor seeing a patient."
+    },
+    {
+      "id": "parameters-weights",
+      "t": "Parameters / Weights",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "The internal numbers a model learns during training. Parameter count (e.g. '8B', '70B') is a rough indicator of a model's size and capacity.",
+      "e": "A 70B model holds about 70 billion learned numbers."
+    },
+    {
+      "id": "dataset",
+      "t": "Dataset",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "The collection of examples used to train or test a model. Data quality, diversity and licensing matter as much as model design.",
+      "e": "Common Crawl, a huge scrape of the public web."
+    },
+    {
+      "id": "overfitting",
+      "t": "Overfitting",
+      "c": "Foundations",
+      "l": "P",
+      "s": "est",
+      "d": "When a model memorises its training data instead of learning general patterns, so it performs well in training but poorly on new data.",
+      "e": "A student who memorised past papers but fails new questions."
+    },
+    {
+      "id": "loss-function",
+      "t": "Loss Function",
+      "c": "Foundations",
+      "l": "P",
+      "s": "est",
+      "d": "A formula that measures how wrong a model's predictions are. Training is the process of pushing this number down.",
+      "e": "Validation loss dropping means the model is learning."
+    },
+    {
+      "id": "gradient-descent-backpropagation",
+      "t": "Gradient Descent / Backpropagation",
+      "c": "Foundations",
+      "l": "A",
+      "s": "est",
+      "d": "The core algorithms of training: backpropagation works out how each weight contributed to the error, and gradient descent nudges every weight in the direction that reduces it.",
+      "e": "Walking downhill in fog, one small step at a time."
+    },
+    {
+      "id": "algorithm",
+      "t": "Algorithm",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "A precise set of steps for solving a problem. In AI, it usually refers to the learning method or the procedure a model follows.",
+      "e": "The recipe, not the cake."
+    },
+    {
+      "id": "model",
+      "t": "Model",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "The trained artefact that takes an input and produces an output: architecture plus learned weights. When people say 'the AI', they usually mean the model.",
+      "e": "GPT, Claude and Llama are model families."
+    },
+    {
+      "id": "natural-language-processing-nlp",
+      "t": "Natural Language Processing (NLP)",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "The field of AI concerned with understanding and generating human language. LLMs are the current state of the art in NLP.",
+      "e": "Translation, sentiment analysis, chatbots."
+    },
+    {
+      "id": "computer-vision",
+      "t": "Computer Vision",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "The field of AI that lets machines interpret images and video, including detecting objects, reading text and recognising faces.",
+      "e": "Self-checkout cameras identifying produce."
+    },
+    {
+      "id": "transfer-learning",
+      "t": "Transfer Learning",
+      "c": "Foundations",
+      "l": "P",
+      "s": "est",
+      "d": "Starting from a model already trained on one task and adapting it to a related task, instead of training from scratch. Fine-tuning is a form of transfer learning.",
+      "e": "An English-trained model adapted for legal English."
+    },
+    {
+      "id": "synthetic-data",
+      "t": "Synthetic Data",
+      "c": "Foundations",
+      "l": "P",
+      "s": "hot",
+      "d": "Training data generated by AI or simulation rather than collected from the real world. It fills gaps where real data is scarce, private or expensive.",
+      "e": "Frontier labs use model-written maths problems to train reasoning."
+    },
+    {
+      "id": "data-labelling-annotation",
+      "t": "Data Labelling / Annotation",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "Humans tagging data with the correct answers so models can learn from it. A large global workforce does this, increasingly for expert-level tasks.",
+      "e": "Doctors rating model answers to medical questions."
+    },
+    {
+      "id": "scaling-laws",
+      "t": "Scaling Laws",
+      "c": "Foundations",
+      "l": "P",
+      "s": "est",
+      "d": "The empirical finding that model performance improves predictably as you increase compute, data and parameters. It justified the race to build ever-larger models.",
+      "e": "10x more compute gives a measurable, predictable gain."
+    },
+    {
+      "id": "emergent-abilities",
+      "t": "Emergent Abilities",
+      "c": "Foundations",
+      "l": "P",
+      "s": "est",
+      "d": "Capabilities that appear in larger models but not in smaller ones, seemingly without being specifically trained, such as multi-step arithmetic. Researchers still debate how 'sudden' they really are.",
+      "e": "Small models can't do it; big ones suddenly can."
+    },
+    {
+      "id": "black-box",
+      "t": "Black Box",
+      "c": "Foundations",
+      "l": "B",
+      "s": "est",
+      "d": "Describes a model whose internal reasoning can't easily be inspected or explained. Most deep learning models are black boxes to some degree.",
+      "e": "It gives the right answer but can't show why."
+    },
+    {
+      "id": "large-language-model-llm",
+      "t": "Large Language Model (LLM)",
+      "c": "Models & Architecture",
+      "l": "B",
+      "s": "est",
+      "d": "An AI model trained on enormous amounts of text to predict the next token. At scale, that simple objective produces models that can write, summarise, translate, code and reason.",
+      "e": "GPT, Claude, Gemini, Llama, Qwen, Mistral."
+    },
+    {
+      "id": "transformer",
+      "t": "Transformer",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "est",
+      "d": "The neural-network architecture, introduced by Google in 2017 ('Attention Is All You Need'), that almost every modern LLM is built on. Its key mechanism, attention, lets the model weigh which parts of the input matter most to each other.",
+      "e": "The 'T' in GPT."
+    },
+    {
+      "id": "attention-self-attention",
+      "t": "Attention / Self-Attention",
+      "c": "Models & Architecture",
+      "l": "A",
+      "s": "est",
+      "d": "The mechanism inside transformers that lets every token 'look at' every other token and decide how relevant it is. It's why models can connect a pronoun to a noun many sentences earlier.",
+      "e": "Working out that 'it' refers to 'the bank', not 'the river'."
+    },
+    {
+      "id": "gpt-generative-pre-trained-transformer",
+      "t": "GPT (Generative Pre-trained Transformer)",
+      "c": "Models & Architecture",
+      "l": "B",
+      "s": "est",
+      "d": "OpenAI's family of LLMs and the acronym that describes the recipe: generate text, pre-train on huge data, use the transformer architecture. It is often used loosely to mean any chatbot model.",
+      "e": "ChatGPT runs on GPT models."
+    },
+    {
+      "id": "foundation-model",
+      "t": "Foundation Model",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "est",
+      "d": "A large, general-purpose model trained on broad data that can be adapted to many downstream tasks. Most AI products are built on top of a handful of foundation models.",
+      "e": "One base model powering a legal bot, a tutor and a coding tool."
+    },
+    {
+      "id": "frontier-model",
+      "t": "Frontier Model",
+      "c": "Models & Architecture",
+      "l": "B",
+      "s": "hot",
+      "d": "The most capable models available at any given time, typically from labs like OpenAI, Anthropic, Google DeepMind, xAI and Meta, plus leading Chinese labs. Regulators use the term for models above certain capability or compute thresholds.",
+      "e": "Each new flagship release resets the frontier."
+    },
+    {
+      "id": "frontier-lab",
+      "t": "Frontier Lab",
+      "c": "Models & Architecture",
+      "l": "B",
+      "s": "hot",
+      "d": "A company training the most advanced AI models, needing billions of dollars of compute. The term separates model builders from companies that build on top of their models.",
+      "e": "OpenAI, Anthropic, Google DeepMind, xAI, Meta, DeepSeek."
+    },
+    {
+      "id": "multimodal-model",
+      "t": "Multimodal Model",
+      "c": "Models & Architecture",
+      "l": "B",
+      "s": "est",
+      "d": "A model that can understand or generate more than one type of data, such as text, images, audio and video, within one system.",
+      "e": "Photograph a broken appliance and ask how to fix it."
+    },
+    {
+      "id": "reasoning-model-lrm",
+      "t": "Reasoning Model / LRM",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "hot",
+      "d": "A model (also called a Large Reasoning Model) trained with reinforcement learning to think through a problem in hidden steps before answering. Slower and costlier, but much stronger at maths, code and multi-step problems.",
+      "e": "The 'Thinking…' indicator in AI apps."
+    },
+    {
+      "id": "small-language-model-slm",
+      "t": "Small Language Model (SLM)",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "hot",
+      "d": "A compact model, typically under ~15B parameters, cheap and fast enough to run on laptops, phones or edge devices. Often fine-tuned for one narrow job.",
+      "e": "Phi, Gemma and small Llama/Qwen variants."
+    },
+    {
+      "id": "open-weight-model",
+      "t": "Open-Weight Model",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "hot",
+      "d": "A model whose trained weights are published so anyone can download, run and fine-tune it, though the training data and code may stay private. Different from fully 'open source' AI.",
+      "e": "Llama, Qwen, DeepSeek, Mistral, gpt-oss."
+    },
+    {
+      "id": "closed-proprietary-model",
+      "t": "Closed / Proprietary Model",
+      "c": "Models & Architecture",
+      "l": "B",
+      "s": "est",
+      "d": "A model available only through its maker's app or API; the weights are never released. Usually the most capable, but you depend on the vendor.",
+      "e": "GPT, Claude and Gemini flagship models."
+    },
+    {
+      "id": "open-source-ai",
+      "t": "Open Source AI",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "hot",
+      "d": "AI released with weights, code and ideally training-data details under a licence that allows use, study, modification and sharing. The Open Source Initiative publishes a formal definition that most 'open' models don't fully meet.",
+      "e": "Open-weight is not automatically open source."
+    },
+    {
+      "id": "mixture-of-experts-moe",
+      "t": "Mixture of Experts (MoE)",
+      "c": "Models & Architecture",
+      "l": "A",
+      "s": "hot",
+      "d": "An architecture that splits a model into many specialised sub-networks ('experts') and activates only a few for each token. You get the knowledge of a huge model at the running cost of a smaller one.",
+      "e": "A 600B-parameter model that only uses ~40B per token."
+    },
+    {
+      "id": "diffusion-model",
+      "t": "Diffusion Model",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "est",
+      "d": "A generative model that learns to turn random noise into an image, video or audio by reversing a gradual noising process. It powers most image and video generators.",
+      "e": "Stable Diffusion, Midjourney, video models."
+    },
+    {
+      "id": "diffusion-language-model",
+      "t": "Diffusion Language Model",
+      "c": "Models & Architecture",
+      "l": "A",
+      "s": "new",
+      "d": "A language model that generates text by refining a whole block of tokens in parallel, diffusion-style, instead of one token at a time. It promises much faster generation.",
+      "e": "Text appearing as a rough draft that sharpens all at once."
+    },
+    {
+      "id": "gan-generative-adversarial-network",
+      "t": "GAN (Generative Adversarial Network)",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "est",
+      "d": "Two networks trained against each other: a generator makes fakes and a discriminator tries to spot them, each improving the other. It was the leading image generator before diffusion models.",
+      "e": "The tech behind early deepfakes."
+    },
+    {
+      "id": "encoder-decoder",
+      "t": "Encoder / Decoder",
+      "c": "Models & Architecture",
+      "l": "A",
+      "s": "est",
+      "d": "An encoder turns input into an internal representation; a decoder generates output from it. Most chat LLMs are 'decoder-only', while models like BERT are encoder-only.",
+      "e": "Translation models use both."
+    },
+    {
+      "id": "bert",
+      "t": "BERT",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "est",
+      "d": "Google's 2018 encoder-only transformer, designed to understand text rather than generate it. Its descendants still power search ranking and classification.",
+      "e": "Used to power Google Search understanding."
+    },
+    {
+      "id": "state-space-model-ssm-mamba",
+      "t": "State Space Model (SSM) / Mamba",
+      "c": "Models & Architecture",
+      "l": "A",
+      "s": "hot",
+      "d": "An alternative to transformers that processes long sequences more efficiently by keeping a compact running state. Often combined with attention in 'hybrid' architectures.",
+      "e": "Handling very long inputs at lower cost."
+    },
+    {
+      "id": "recurrent-depth-opaque-recurrence",
+      "t": "Recurrent Depth / Opaque Recurrence",
+      "c": "Models & Architecture",
+      "l": "A",
+      "s": "new",
+      "d": "Models that loop an input through their internal layers multiple times to 'think' in hidden vectors instead of writing out reasoning in words. It can boost capability but makes reasoning harder to inspect.",
+      "e": "Thinking silently instead of thinking out loud."
+    },
+    {
+      "id": "neuralese",
+      "t": "Neuralese",
+      "c": "Models & Architecture",
+      "l": "A",
+      "s": "new",
+      "d": "A hypothetical internal 'language' that models might reason in, made of vectors rather than human words. Safety researchers worry it would make AI reasoning unreadable to humans.",
+      "e": "The opposite of a readable chain of thought."
+    },
+    {
+      "id": "recursive-language-model-rlm",
+      "t": "Recursive Language Model (RLM)",
+      "c": "Models & Architecture",
+      "l": "A",
+      "s": "new",
+      "d": "An approach where a model breaks a very long input or task into pieces and calls itself (or sub-models) recursively on each part. It works around context-window limits.",
+      "e": "Reading a 10,000-page archive by delegating chapters to itself."
+    },
+    {
+      "id": "world-model",
+      "t": "World Model",
+      "c": "Models & Architecture",
+      "l": "A",
+      "s": "hot",
+      "d": "A model that learns how an environment works (physics, cause and effect) so it can simulate and predict what happens next. Seen as key for robotics, games and more general intelligence.",
+      "e": "Generating an explorable 3D world from a prompt."
+    },
+    {
+      "id": "vision-language-model-vlm",
+      "t": "Vision-Language Model (VLM)",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "est",
+      "d": "A model that understands images and text together, for example answering questions about a photo, chart or screenshot.",
+      "e": "Reading a receipt and totalling it."
+    },
+    {
+      "id": "vision-language-action-model-vla",
+      "t": "Vision-Language-Action Model (VLA)",
+      "c": "Models & Architecture",
+      "l": "A",
+      "s": "hot",
+      "d": "A model that takes in vision and language and outputs physical actions, used to control robots.",
+      "e": "'Pick up the red cup' turned into arm movements."
+    },
+    {
+      "id": "embedding-model",
+      "t": "Embedding Model",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "est",
+      "d": "A model that converts text, images or other data into vectors (embeddings) that capture meaning. It is the backbone of semantic search and RAG.",
+      "e": "Turning every support article into a searchable vector."
+    },
+    {
+      "id": "base-model-vs-instruct-model",
+      "t": "Base Model vs Instruct Model",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "est",
+      "d": "A base model only continues text; an instruct (or chat) model has been further trained to follow instructions and hold a conversation. Most apps use instruct models.",
+      "e": "Base: finishes your sentence. Instruct: answers your question."
+    },
+    {
+      "id": "model-card",
+      "t": "Model Card",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "est",
+      "d": "A document published with a model describing what it is for, how it was trained and evaluated, and its limitations and risks.",
+      "e": "The nutrition label for a model."
+    },
+    {
+      "id": "system-card",
+      "t": "System Card",
+      "c": "Models & Architecture",
+      "l": "P",
+      "s": "hot",
+      "d": "A detailed safety and capability report released by a lab alongside a major model, covering red-teaming, dangerous-capability tests and mitigations.",
+      "e": "Published with every flagship frontier release."
+    },
+    {
+      "id": "knowledge-cutoff",
+      "t": "Knowledge Cutoff",
+      "c": "Models & Architecture",
+      "l": "B",
+      "s": "est",
+      "d": "The date after which a model has no training data, so it doesn't know about later events unless given tools like web search.",
+      "e": "Asking about last week's news without search."
+    },
+    {
+      "id": "model-collapse",
+      "t": "Model Collapse",
+      "c": "Models & Architecture",
+      "l": "A",
+      "s": "hot",
+      "d": "Degradation that happens when models are trained repeatedly on AI-generated content, losing diversity and accuracy over generations.",
+      "e": "A photocopy of a photocopy of a photocopy."
+    },
+    {
+      "id": "token",
+      "t": "Token",
+      "c": "Using LLMs",
+      "l": "B",
+      "s": "est",
+      "d": "The chunks of text a model actually reads and writes, often a word, part of a word or punctuation. Pricing, speed and limits are all measured in tokens.",
+      "e": "Roughly 1 token ≈ ¾ of an English word."
+    },
+    {
+      "id": "tokenizer",
+      "t": "Tokenizer",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "est",
+      "d": "The component that splits text into tokens and maps them to numbers. Different models use different tokenizers, which is why token counts vary.",
+      "e": "Hindi text often uses more tokens than English."
+    },
+    {
+      "id": "context-window",
+      "t": "Context Window",
+      "c": "Using LLMs",
+      "l": "B",
+      "s": "est",
+      "d": "The maximum amount of text (in tokens) a model can consider at once, including instructions, documents, conversation history and its own answer.",
+      "e": "The model's short-term working memory."
+    },
+    {
+      "id": "context-rot",
+      "t": "Context Rot",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "new",
+      "d": "The drop in a model's accuracy as its context window fills with long or noisy content, even when it's under the limit. It's why bigger windows don't automatically mean better answers.",
+      "e": "An agent forgetting early instructions 200 steps in."
+    },
+    {
+      "id": "chatbot",
+      "t": "Chatbot",
+      "c": "Using LLMs",
+      "l": "B",
+      "s": "est",
+      "d": "A conversational interface to an AI model. Modern chatbots are powered by LLMs and increasingly can use tools and take actions.",
+      "e": "ChatGPT, Claude, Gemini, Meta AI."
+    },
+    {
+      "id": "ai-assistant-copilot",
+      "t": "AI Assistant / Copilot",
+      "c": "Using LLMs",
+      "l": "B",
+      "s": "est",
+      "d": "An AI built into a product to help you with tasks as you work, rather than acting fully on its own. 'Copilot' is also Microsoft's brand for its assistants.",
+      "e": "Drafting an email inside your inbox."
+    },
+    {
+      "id": "temperature",
+      "t": "Temperature",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "est",
+      "d": "A setting that controls how random a model's output is. Low temperature gives focused, repeatable answers; high temperature gives varied, creative ones.",
+      "e": "0.1 for extraction, 0.9 for brainstorming."
+    },
+    {
+      "id": "top-p-top-k-sampling",
+      "t": "Top-p / Top-k Sampling",
+      "c": "Using LLMs",
+      "l": "A",
+      "s": "est",
+      "d": "Settings that limit which candidate tokens the model can choose from, trimming unlikely options. Used together with temperature to control creativity.",
+      "e": "Only picking from the top 90% most likely words."
+    },
+    {
+      "id": "hallucination",
+      "t": "Hallucination",
+      "c": "Using LLMs",
+      "l": "B",
+      "s": "est",
+      "d": "When an AI confidently produces false or invented information, such as fake facts, citations or numbers. It happens because models generate plausible text, not verified truth.",
+      "e": "A chatbot citing a court case that never existed."
+    },
+    {
+      "id": "grounding",
+      "t": "Grounding",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "est",
+      "d": "Tying a model's answers to verifiable sources, such as your documents, a database or web search, to reduce hallucination.",
+      "e": "Answers that cite the exact policy paragraph."
+    },
+    {
+      "id": "structured-output",
+      "t": "Structured Output",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "est",
+      "d": "Forcing a model to reply in a strict machine-readable format, like JSON matching a schema, so software can use the result reliably.",
+      "e": "Extracting {name, email, amount} from invoices."
+    },
+    {
+      "id": "streaming",
+      "t": "Streaming",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "est",
+      "d": "Sending a model's response token by token as it's generated, so users see text appear immediately instead of waiting for the full answer.",
+      "e": "The typing effect in chat apps."
+    },
+    {
+      "id": "latency-ttft",
+      "t": "Latency / TTFT",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "est",
+      "d": "Latency is how long a response takes; TTFT (time to first token) is how quickly the first word appears. Both matter hugely for voice and real-time apps.",
+      "e": "Voice agents need sub-second TTFT."
+    },
+    {
+      "id": "tokens-per-second-throughput",
+      "t": "Tokens per Second (Throughput)",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "est",
+      "d": "How fast a model generates output, and how much total work a system can serve at once. Faster throughput means snappier apps and lower cost.",
+      "e": "Specialised chips serving 1,000+ tokens/sec."
+    },
+    {
+      "id": "api-application-programming-interface",
+      "t": "API (Application Programming Interface)",
+      "c": "Using LLMs",
+      "l": "B",
+      "s": "est",
+      "d": "The way software talks to other software. AI companies sell model access via APIs, charged per token.",
+      "e": "Your app sends a prompt to an API and gets text back."
+    },
+    {
+      "id": "rate-limit",
+      "t": "Rate Limit",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "est",
+      "d": "A cap on how many requests or tokens you can send to an API per minute or day. Hitting it causes errors in production apps.",
+      "e": "429: Too Many Requests."
+    },
+    {
+      "id": "model-router-multi-model-routing",
+      "t": "Model Router / Multi-Model Routing",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "hot",
+      "d": "Automatically sending each request to the most suitable model, e.g. cheap and fast for easy questions, powerful for hard ones, to balance cost and quality.",
+      "e": "Simple FAQ → small model; legal analysis → frontier model."
+    },
+    {
+      "id": "thinking-budget-reasoning-effort",
+      "t": "Thinking Budget / Reasoning Effort",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "hot",
+      "d": "A setting that controls how much a reasoning model 'thinks' before answering. More thinking improves hard answers but costs more time and tokens.",
+      "e": "Low effort for chat, high effort for debugging."
+    },
+    {
+      "id": "test-time-compute",
+      "t": "Test-Time Compute",
+      "c": "Using LLMs",
+      "l": "A",
+      "s": "hot",
+      "d": "Spending more compute when the model is answering (not training), for example longer reasoning or trying multiple answers, to get better results.",
+      "e": "Letting the model think for minutes on a hard maths problem."
+    },
+    {
+      "id": "prompt-caching",
+      "t": "Prompt Caching",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "hot",
+      "d": "Reusing the processed version of a repeated prompt prefix (like long instructions or documents) so later requests are faster and much cheaper.",
+      "e": "Cached input tokens often cost ~90% less."
+    },
+    {
+      "id": "batch-processing-batch-api",
+      "t": "Batch Processing (Batch API)",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "est",
+      "d": "Sending many requests to be processed asynchronously, usually within 24 hours, at a large discount. Ideal for non-urgent bulk jobs.",
+      "e": "Classifying 1 million reviews overnight at half price."
+    },
+    {
+      "id": "deep-research",
+      "t": "Deep Research",
+      "c": "Using LLMs",
+      "l": "B",
+      "s": "hot",
+      "d": "An AI mode that autonomously runs many web searches, reads sources and produces a long cited report over several minutes.",
+      "e": "A 20-page market analysis with 80 citations."
+    },
+    {
+      "id": "ai-search-answer-engine",
+      "t": "AI Search / Answer Engine",
+      "c": "Using LLMs",
+      "l": "B",
+      "s": "hot",
+      "d": "Search that returns a synthesised AI answer with citations instead of a list of links.",
+      "e": "Perplexity, Google AI Mode, ChatGPT search."
+    },
+    {
+      "id": "sycophancy",
+      "t": "Sycophancy",
+      "c": "Using LLMs",
+      "l": "P",
+      "s": "hot",
+      "d": "A model's tendency to agree with or flatter the user rather than give an honest answer. Labs actively train against it.",
+      "e": "Praising a flawed business plan because you seem excited."
+    },
+    {
+      "id": "canvas-artifacts",
+      "t": "Canvas / Artifacts",
+      "c": "Using LLMs",
+      "l": "B",
+      "s": "est",
+      "d": "Side-panel workspaces in chat apps where the AI creates and edits documents, code or apps you can see and interact with alongside the conversation.",
+      "e": "Building a small web app inside the chat."
+    },
+    {
+      "id": "custom-gpts-gems-projects",
+      "t": "Custom GPTs / Gems / Projects",
+      "c": "Using LLMs",
+      "l": "B",
+      "s": "est",
+      "d": "Saved configurations of a chatbot with your own instructions, files and tools, reusable for a specific job.",
+      "e": "A 'Proposal Writer' bot loaded with your templates."
+    },
+    {
+      "id": "prompt",
+      "t": "Prompt",
+      "c": "Prompting & Context",
+      "l": "B",
+      "s": "est",
+      "d": "The input you give an AI model: a question, instruction, examples or context. The quality of the output depends heavily on the quality of the prompt.",
+      "e": "'Summarise this for a CFO in 5 bullets' beats 'summarise this'."
+    },
+    {
+      "id": "system-prompt",
+      "t": "System Prompt",
+      "c": "Prompting & Context",
+      "l": "B",
+      "s": "est",
+      "d": "High-priority instructions set by the app builder that define the model's role, tone and rules before the user says anything.",
+      "e": "'You are a support agent for Acme. Never discuss pricing.'"
+    },
+    {
+      "id": "prompt-engineering",
+      "t": "Prompt Engineering",
+      "c": "Prompting & Context",
+      "l": "B",
+      "s": "est",
+      "d": "Designing and refining prompts to get reliable, high-quality outputs, using clear roles, examples, constraints and output formats.",
+      "e": "Iterating on a prompt like you iterate on code."
+    },
+    {
+      "id": "context-engineering",
+      "t": "Context Engineering",
+      "c": "Prompting & Context",
+      "l": "P",
+      "s": "hot",
+      "d": "Deciding exactly what information goes into the model's context (instructions, retrieved documents, tool results, memory) and in what order. It has largely replaced 'prompt engineering' as the core skill for building agents.",
+      "e": "Not just 'what do I ask?' but 'what does the model need to see?'"
+    },
+    {
+      "id": "zero-shot-prompting",
+      "t": "Zero-Shot Prompting",
+      "c": "Prompting & Context",
+      "l": "B",
+      "s": "est",
+      "d": "Asking a model to perform a task with no examples, relying on what it already knows.",
+      "e": "'Classify this review as positive or negative.'"
+    },
+    {
+      "id": "few-shot-prompting",
+      "t": "Few-Shot Prompting",
+      "c": "Prompting & Context",
+      "l": "B",
+      "s": "est",
+      "d": "Including a handful of worked examples in the prompt so the model copies the pattern and format.",
+      "e": "Show 3 tweets in your brand voice, then ask for a 4th."
+    },
+    {
+      "id": "in-context-learning",
+      "t": "In-Context Learning",
+      "c": "Prompting & Context",
+      "l": "P",
+      "s": "est",
+      "d": "A model's ability to learn a new task from instructions and examples in the prompt alone, without any retraining.",
+      "e": "Teaching a new invoice format with two samples."
+    },
+    {
+      "id": "chain-of-thought-cot",
+      "t": "Chain-of-Thought (CoT)",
+      "c": "Prompting & Context",
+      "l": "P",
+      "s": "est",
+      "d": "Prompting or training a model to reason step by step before answering, which improves accuracy on logic and maths.",
+      "e": "'Let's think step by step.'"
+    },
+    {
+      "id": "tree-of-thoughts",
+      "t": "Tree of Thoughts",
+      "c": "Prompting & Context",
+      "l": "A",
+      "s": "est",
+      "d": "Having a model explore several reasoning paths in parallel, evaluate them and pursue the most promising, like searching a decision tree.",
+      "e": "Trying three solution strategies and picking the best."
+    },
+    {
+      "id": "self-consistency",
+      "t": "Self-Consistency",
+      "c": "Prompting & Context",
+      "l": "A",
+      "s": "est",
+      "d": "Generating several independent answers and choosing the most common one, which reduces random reasoning errors.",
+      "e": "Ask 5 times, take the majority answer."
+    },
+    {
+      "id": "react-reason-act",
+      "t": "ReAct (Reason + Act)",
+      "c": "Prompting & Context",
+      "l": "P",
+      "s": "est",
+      "d": "A foundational agent pattern where the model alternates between reasoning about what to do, taking an action (tool call) and observing the result.",
+      "e": "Think → search → read → think → answer."
+    },
+    {
+      "id": "role-prompting",
+      "t": "Role Prompting",
+      "c": "Prompting & Context",
+      "l": "B",
+      "s": "est",
+      "d": "Assigning the model a persona or expertise to shape its tone and focus.",
+      "e": "'You are a senior tax accountant in India…'"
+    },
+    {
+      "id": "prompt-chaining",
+      "t": "Prompt Chaining",
+      "c": "Prompting & Context",
+      "l": "P",
+      "s": "est",
+      "d": "Breaking a task into a sequence of prompts where each step's output feeds the next, which gives more control than one giant prompt.",
+      "e": "Outline → draft → edit → format."
+    },
+    {
+      "id": "meta-prompting",
+      "t": "Meta-Prompting",
+      "c": "Prompting & Context",
+      "l": "P",
+      "s": "hot",
+      "d": "Using an AI model to write, critique or improve prompts for another model (or itself).",
+      "e": "'Rewrite this prompt so a smaller model follows it reliably.'"
+    },
+    {
+      "id": "prompt-template",
+      "t": "Prompt Template",
+      "c": "Prompting & Context",
+      "l": "P",
+      "s": "est",
+      "d": "A reusable prompt with placeholders filled in at runtime, so the same well-tested instructions work for many inputs.",
+      "e": "'Write a product description for {product} aimed at {audience}.'"
+    },
+    {
+      "id": "negative-prompt",
+      "t": "Negative Prompt",
+      "c": "Prompting & Context",
+      "l": "P",
+      "s": "est",
+      "d": "In image generation, a list of things you don't want in the output.",
+      "e": "'blurry, extra fingers, watermark'."
+    },
+    {
+      "id": "context-compaction",
+      "t": "Context Compaction",
+      "c": "Prompting & Context",
+      "l": "A",
+      "s": "new",
+      "d": "Automatically summarising or pruning older parts of a long conversation or agent run so it fits in the context window without losing key facts.",
+      "e": "An agent summarising its first 100 steps into a short note."
+    },
+    {
+      "id": "context-window-management",
+      "t": "Context Window Management",
+      "c": "Prompting & Context",
+      "l": "A",
+      "s": "hot",
+      "d": "Techniques for deciding what stays in context, what gets summarised, and what gets stored outside for later retrieval during long tasks.",
+      "e": "Keeping the task plan pinned, trimming old tool logs."
+    },
+    {
+      "id": "instruction-hierarchy",
+      "t": "Instruction Hierarchy",
+      "c": "Prompting & Context",
+      "l": "A",
+      "s": "hot",
+      "d": "The rule that models should prioritise system/developer instructions over user messages, and user messages over content found in documents or tool results. It's a key defence against prompt injection.",
+      "e": "A web page can't override the developer's rules."
+    },
+    {
+      "id": "prompt-library",
+      "t": "Prompt Library",
+      "c": "Prompting & Context",
+      "l": "B",
+      "s": "est",
+      "d": "A shared, organised collection of tested prompts that a team reuses.",
+      "e": "A company's approved prompts for sales emails."
+    },
+    {
+      "id": "pre-training",
+      "t": "Pre-training",
+      "c": "Training & Fine-Tuning",
+      "l": "P",
+      "s": "est",
+      "d": "The first, most expensive training stage, where a model learns language and world knowledge by predicting the next token across trillions of tokens of text.",
+      "e": "Reading most of the internet."
+    },
+    {
+      "id": "post-training",
+      "t": "Post-training",
+      "c": "Training & Fine-Tuning",
+      "l": "P",
+      "s": "hot",
+      "d": "Everything done after pre-training to make a model useful and safe: instruction tuning, RLHF, reasoning RL, safety training. It's now where much of the capability gain comes from.",
+      "e": "Turning a raw text predictor into a helpful assistant."
+    },
+    {
+      "id": "fine-tuning",
+      "t": "Fine-Tuning",
+      "c": "Training & Fine-Tuning",
+      "l": "P",
+      "s": "est",
+      "d": "Further training an existing model on a smaller, specialised dataset so it learns a particular style, format or domain. Use fine-tuning to change behaviour; use RAG to change knowledge.",
+      "e": "Tuning a model to write in your support team's tone."
+    },
+    {
+      "id": "supervised-fine-tuning-sft",
+      "t": "Supervised Fine-Tuning (SFT)",
+      "c": "Training & Fine-Tuning",
+      "l": "P",
+      "s": "est",
+      "d": "Fine-tuning on example prompt/response pairs written or approved by humans, teaching the model the desired answers directly.",
+      "e": "10,000 ideal customer-support replies."
+    },
+    {
+      "id": "instruction-tuning",
+      "t": "Instruction Tuning",
+      "c": "Training & Fine-Tuning",
+      "l": "P",
+      "s": "est",
+      "d": "Fine-tuning a base model on many instruction-following examples so it responds helpfully to requests.",
+      "e": "What turns a base model into a chat model."
+    },
+    {
+      "id": "rlhf-reinforcement-learning-from-human-feedback",
+      "t": "RLHF (Reinforcement Learning from Human Feedback)",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "est",
+      "d": "Humans compare model outputs, a reward model learns their preferences, and the LLM is trained to produce responses people prefer. It made chatbots helpful and polite.",
+      "e": "Rating two answers: which is better?"
+    },
+    {
+      "id": "rlaif-constitutional-ai",
+      "t": "RLAIF / Constitutional AI",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "est",
+      "d": "Using AI feedback guided by a written set of principles (a 'constitution') instead of relying only on human ratings. Pioneered by Anthropic.",
+      "e": "A model critiquing its own answer against its principles."
+    },
+    {
+      "id": "dpo-direct-preference-optimization",
+      "t": "DPO (Direct Preference Optimization)",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "est",
+      "d": "A simpler alternative to RLHF that trains directly on pairs of preferred vs rejected answers, without a separate reward model.",
+      "e": "Cheaper preference tuning for open models."
+    },
+    {
+      "id": "rlvr-rl-with-verifiable-rewards",
+      "t": "RLVR (RL with Verifiable Rewards)",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "hot",
+      "d": "Reinforcement learning where the reward comes from automatically checkable outcomes, such as a correct maths answer or passing tests. It's the main recipe behind reasoning models.",
+      "e": "Reward = 1 if the code passes the unit tests."
+    },
+    {
+      "id": "grpo",
+      "t": "GRPO",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "hot",
+      "d": "Group Relative Policy Optimization: an efficient RL algorithm, popularised by DeepSeek, that scores a group of sampled answers against each other instead of using a separate value model.",
+      "e": "Used to train DeepSeek-R1."
+    },
+    {
+      "id": "reward-model",
+      "t": "Reward Model",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "est",
+      "d": "A model trained to score outputs by quality or preference, used as the 'judge' during reinforcement learning.",
+      "e": "Predicting which answer a human would prefer."
+    },
+    {
+      "id": "reward-hacking",
+      "t": "Reward Hacking",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "hot",
+      "d": "When a model finds a loophole to maximise its reward without actually doing the intended task.",
+      "e": "An agent editing the tests so they pass."
+    },
+    {
+      "id": "rl-environment-gym",
+      "t": "RL Environment / Gym",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "new",
+      "d": "A simulated workspace (a codebase, browser, spreadsheet, company app) where an agent practises tasks and gets rewarded, used to train agentic skills. Building them is a fast-growing business.",
+      "e": "A fake CRM where agents learn to process refunds."
+    },
+    {
+      "id": "lora-low-rank-adaptation",
+      "t": "LoRA (Low-Rank Adaptation)",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "est",
+      "d": "An efficient fine-tuning method that trains a small set of add-on weights instead of the whole model, making customisation possible on a single GPU.",
+      "e": "A plug-in adapter rather than a rebuilt model."
+    },
+    {
+      "id": "qlora",
+      "t": "QLoRA",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "est",
+      "d": "LoRA applied to a quantized (compressed) model, cutting memory needs further so large models can be fine-tuned on consumer hardware.",
+      "e": "Fine-tuning a 70B model on one GPU."
+    },
+    {
+      "id": "peft-parameter-efficient-fine-tuning",
+      "t": "PEFT (Parameter-Efficient Fine-Tuning)",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "est",
+      "d": "The family of techniques, including LoRA and adapters, that fine-tune only a small fraction of a model's parameters.",
+      "e": "Hugging Face's PEFT library."
+    },
+    {
+      "id": "knowledge-distillation",
+      "t": "Knowledge Distillation",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "hot",
+      "d": "Training a smaller 'student' model to imitate a larger 'teacher', keeping much of the quality at a fraction of the cost.",
+      "e": "How many 'mini' and 'flash' models are made."
+    },
+    {
+      "id": "continual-learning",
+      "t": "Continual Learning",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "hot",
+      "d": "Letting a model keep learning from new experience after deployment without forgetting old skills. Widely seen as a missing piece on the road to more general AI.",
+      "e": "An assistant that genuinely improves from each week's work."
+    },
+    {
+      "id": "catastrophic-forgetting",
+      "t": "Catastrophic Forgetting",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "est",
+      "d": "When training a model on new data makes it lose previously learned abilities.",
+      "e": "Fine-tuning on legal text degrades its coding."
+    },
+    {
+      "id": "epoch-batch-learning-rate",
+      "t": "Epoch / Batch / Learning Rate",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "est",
+      "d": "Core training settings: an epoch is one pass over the data, a batch is the chunk processed at once, and the learning rate is how big each weight update is.",
+      "e": "Too high a learning rate and training blows up."
+    },
+    {
+      "id": "checkpoint",
+      "t": "Checkpoint",
+      "c": "Training & Fine-Tuning",
+      "l": "P",
+      "s": "est",
+      "d": "A saved snapshot of a model's weights at a point in training, which can be resumed, evaluated or released.",
+      "e": "Releasing an intermediate checkpoint for research."
+    },
+    {
+      "id": "data-contamination",
+      "t": "Data Contamination",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "est",
+      "d": "When test or benchmark questions leak into training data, making a model look better than it really is.",
+      "e": "A model that has 'seen the exam paper'."
+    },
+    {
+      "id": "model-merging",
+      "t": "Model Merging",
+      "c": "Training & Fine-Tuning",
+      "l": "A",
+      "s": "est",
+      "d": "Combining the weights of two or more fine-tuned models into one that inherits skills from each, without further training.",
+      "e": "Merging a coding model and a chat model."
+    },
+    {
+      "id": "rag-retrieval-augmented-generation",
+      "t": "RAG (Retrieval-Augmented Generation)",
+      "c": "RAG & Knowledge",
+      "l": "B",
+      "s": "est",
+      "d": "The system first retrieves relevant information from your documents or data, then passes it to the LLM to write a grounded answer. It reduces hallucination and keeps answers current without retraining.",
+      "e": "An open-book exam instead of answering from memory."
+    },
+    {
+      "id": "embeddings",
+      "t": "Embeddings",
+      "c": "RAG & Knowledge",
+      "l": "P",
+      "s": "est",
+      "d": "Numeric vectors that capture the meaning of text, images or other data. Similar meanings end up close together, which enables semantic search.",
+      "e": "'Car' and 'automobile' get nearly identical vectors."
+    },
+    {
+      "id": "vector-database",
+      "t": "Vector Database",
+      "c": "RAG & Knowledge",
+      "l": "P",
+      "s": "est",
+      "d": "A database built to store embeddings and quickly find the most similar ones. It's the retrieval layer in most RAG systems.",
+      "e": "Pinecone, Weaviate, Qdrant, Chroma, pgvector."
+    },
+    {
+      "id": "semantic-search",
+      "t": "Semantic Search",
+      "c": "RAG & Knowledge",
+      "l": "B",
+      "s": "est",
+      "d": "Search by meaning rather than exact keywords, powered by embeddings.",
+      "e": "Searching 'leave policy' finds 'vacation rules'."
+    },
+    {
+      "id": "keyword-search-bm25",
+      "t": "Keyword Search / BM25",
+      "c": "RAG & Knowledge",
+      "l": "P",
+      "s": "est",
+      "d": "Classic search that ranks documents by matching words. Still excellent for exact terms like product codes and names.",
+      "e": "Finding 'SKU-4471' exactly."
+    },
+    {
+      "id": "hybrid-search",
+      "t": "Hybrid Search",
+      "c": "RAG & Knowledge",
+      "l": "P",
+      "s": "est",
+      "d": "Combining keyword and semantic search to get the precision of one and the understanding of the other.",
+      "e": "Most production RAG uses hybrid search."
+    },
+    {
+      "id": "chunking",
+      "t": "Chunking",
+      "c": "RAG & Knowledge",
+      "l": "P",
+      "s": "est",
+      "d": "Splitting long documents into smaller pieces before embedding so the most relevant sections can be retrieved. Chunk size and overlap strongly affect RAG quality.",
+      "e": "Breaking a 200-page manual into ~500-token sections."
+    },
+    {
+      "id": "re-ranking",
+      "t": "Re-ranking",
+      "c": "RAG & Knowledge",
+      "l": "P",
+      "s": "est",
+      "d": "A second pass that uses a more precise model to reorder retrieved results so the best matches come first.",
+      "e": "Retrieve 50 chunks, re-rank, keep the top 5."
+    },
+    {
+      "id": "agentic-rag",
+      "t": "Agentic RAG",
+      "c": "RAG & Knowledge",
+      "l": "A",
+      "s": "hot",
+      "d": "RAG where an agent decides how to search: rewriting queries, choosing sources, retrieving repeatedly and checking whether results answer the question.",
+      "e": "A research assistant who keeps digging until confident."
+    },
+    {
+      "id": "graphrag",
+      "t": "GraphRAG",
+      "c": "RAG & Knowledge",
+      "l": "A",
+      "s": "hot",
+      "d": "RAG that builds a knowledge graph of entities and relationships from your documents and retrieves along those connections, which is good for 'big picture' questions.",
+      "e": "'How are these 40 suppliers connected to the delay?'"
+    },
+    {
+      "id": "knowledge-graph",
+      "t": "Knowledge Graph",
+      "c": "RAG & Knowledge",
+      "l": "P",
+      "s": "est",
+      "d": "A network of entities (people, products, places) and the relationships between them, stored in a structured way.",
+      "e": "Google's info panels are powered by one."
+    },
+    {
+      "id": "query-rewriting",
+      "t": "Query Rewriting",
+      "c": "RAG & Knowledge",
+      "l": "P",
+      "s": "est",
+      "d": "Having a model rephrase or expand a user's question before searching so retrieval finds better results.",
+      "e": "'That thing from last quarter' → 'Q2 2026 revenue report'."
+    },
+    {
+      "id": "hyde-hypothetical-document-embeddings",
+      "t": "HyDE (Hypothetical Document Embeddings)",
+      "c": "RAG & Knowledge",
+      "l": "A",
+      "s": "est",
+      "d": "Generating a hypothetical answer first, then searching for real documents similar to it, which often retrieves better than the raw question.",
+      "e": "Imagine the ideal answer, then find what matches it."
+    },
+    {
+      "id": "contextual-retrieval",
+      "t": "Contextual Retrieval",
+      "c": "RAG & Knowledge",
+      "l": "A",
+      "s": "est",
+      "d": "Adding a short description of where each chunk fits in its document before embedding it, so chunks don't lose their meaning out of context.",
+      "e": "Tagging a chunk: 'From Acme's 2026 refund policy, section 3'."
+    },
+    {
+      "id": "cache-augmented-generation-cag",
+      "t": "Cache-Augmented Generation (CAG)",
+      "c": "RAG & Knowledge",
+      "l": "A",
+      "s": "hot",
+      "d": "Instead of retrieving at query time, preloading an entire (small enough) knowledge base into a cached long context, trading retrieval complexity for context cost.",
+      "e": "Loading the whole 100-page handbook once and caching it."
+    },
+    {
+      "id": "document-parsing-ocr",
+      "t": "Document Parsing / OCR",
+      "c": "RAG & Knowledge",
+      "l": "P",
+      "s": "est",
+      "d": "Extracting clean text, tables and structure from PDFs, scans and images so they can be used by AI. Often the hardest part of RAG.",
+      "e": "Turning scanned invoices into structured data."
+    },
+    {
+      "id": "citations-attribution",
+      "t": "Citations / Attribution",
+      "c": "RAG & Knowledge",
+      "l": "B",
+      "s": "est",
+      "d": "Showing which source each part of an AI answer came from so users can verify it.",
+      "e": "Footnotes linking to the exact paragraph."
+    },
+    {
+      "id": "long-context-vs-rag",
+      "t": "Long-Context vs RAG",
+      "c": "RAG & Knowledge",
+      "l": "P",
+      "s": "hot",
+      "d": "The ongoing trade-off between stuffing everything into a huge context window and retrieving only what's relevant. Most real systems combine both.",
+      "e": "RAG for 10 million docs; long context for one contract."
+    },
+    {
+      "id": "semantic-layer",
+      "t": "Semantic Layer",
+      "c": "RAG & Knowledge",
+      "l": "A",
+      "s": "hot",
+      "d": "A business-friendly definition of your data (what 'revenue' or 'active customer' means) that lets AI query databases accurately.",
+      "e": "Stopping an AI from inventing its own revenue formula."
+    },
+    {
+      "id": "text-to-sql",
+      "t": "Text-to-SQL",
+      "c": "RAG & Knowledge",
+      "l": "P",
+      "s": "est",
+      "d": "Turning a natural-language question into a database query and running it.",
+      "e": "'Top 10 customers by sales last month' → SQL."
+    },
+    {
+      "id": "ai-agent",
+      "t": "AI Agent",
+      "c": "AI Agents",
+      "l": "B",
+      "s": "hot",
+      "d": "An AI system that pursues a goal on its own: it plans steps, uses tools, observes results and adjusts until the task is done. An LLM answers; an agent acts.",
+      "e": "'Book the cheapest flight to Goa next Friday', and it actually books it."
+    },
+    {
+      "id": "agentic-ai",
+      "t": "Agentic AI",
+      "c": "AI Agents",
+      "l": "B",
+      "s": "hot",
+      "d": "The broad category of AI systems that act autonomously toward goals, rather than just responding to prompts. Also used loosely as a marketing label.",
+      "e": "From chatbots that talk to agents that do."
+    },
+    {
+      "id": "tool-use-function-calling",
+      "t": "Tool Use / Function Calling",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "est",
+      "d": "An LLM's ability to decide when to call an external function or API (search, calculator, database, email) and use the result. It's the basic mechanism that turns a chatbot into an agent.",
+      "e": "The model outputs get_weather(city='Delhi') and your code runs it."
+    },
+    {
+      "id": "agent-loop",
+      "t": "Agent Loop",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "The core cycle every agent runs: think, act (call a tool), observe the result, repeat until done or stopped.",
+      "e": "The while-loop at the heart of every agent."
+    },
+    {
+      "id": "agentic-workflow",
+      "t": "Agentic Workflow",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "A process where an LLM works through a defined sequence of steps, such as plan, draft, critique and revise, instead of answering in one shot. More predictable than a fully autonomous agent.",
+      "e": "Generator → Critic → Human review → Publish."
+    },
+    {
+      "id": "workflow-vs-agent",
+      "t": "Workflow vs Agent",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "A key design choice: workflows follow predefined code paths with LLM steps; agents decide their own path dynamically. Start with workflows, and add autonomy only where needed.",
+      "e": "Invoice processing = workflow; open-ended research = agent."
+    },
+    {
+      "id": "planning",
+      "t": "Planning",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "est",
+      "d": "An agent's ability to break a goal into ordered sub-tasks before acting, and to revise the plan as it learns more.",
+      "e": "A to-do list the agent writes for itself."
+    },
+    {
+      "id": "reflection-self-critique",
+      "t": "Reflection / Self-Critique",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "est",
+      "d": "An agent reviewing its own output, finding problems and trying again before returning a result.",
+      "e": "'Check your answer for errors, then fix them.'"
+    },
+    {
+      "id": "multi-agent-system",
+      "t": "Multi-Agent System",
+      "c": "AI Agents",
+      "l": "A",
+      "s": "hot",
+      "d": "Several specialised agents working together, each with its own role, coordinated by a supervisor or a shared workflow.",
+      "e": "Researcher, writer and reviewer agents on one report."
+    },
+    {
+      "id": "orchestrator-supervisor-agent",
+      "t": "Orchestrator / Supervisor Agent",
+      "c": "AI Agents",
+      "l": "A",
+      "s": "hot",
+      "d": "An agent that splits a task, delegates parts to other agents, and combines their results.",
+      "e": "A project-manager agent running a team of worker agents."
+    },
+    {
+      "id": "sub-agent",
+      "t": "Sub-agent",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "A helper agent spawned by a main agent to handle one isolated part of a task in its own clean context, then report back.",
+      "e": "Spinning up a sub-agent to search 50 files."
+    },
+    {
+      "id": "agent-memory",
+      "t": "Agent Memory",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "How an agent retains information. Short-term memory is the current context; long-term memory stores facts, preferences and past lessons across sessions.",
+      "e": "An assistant that remembers you prefer window seats."
+    },
+    {
+      "id": "agent-amnesia",
+      "t": "Agent Amnesia",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "new",
+      "d": "The problem that most agents start each session with no memory of previous ones, repeating mistakes and re-asking questions.",
+      "e": "Explaining your codebase to the agent again every morning."
+    },
+    {
+      "id": "human-in-the-loop-hitl",
+      "t": "Human-in-the-Loop (HITL)",
+      "c": "AI Agents",
+      "l": "B",
+      "s": "est",
+      "d": "Designing AI systems so a person reviews or approves key decisions before they take effect. Essential for payments, publishing and sending messages.",
+      "e": "The agent drafts the post; you click 'Approve'."
+    },
+    {
+      "id": "human-on-the-loop",
+      "t": "Human-on-the-Loop",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "A lighter form of oversight where the agent acts on its own but a human monitors and can intervene or roll back.",
+      "e": "Reviewing a dashboard of what the agent did today."
+    },
+    {
+      "id": "autonomy-levels",
+      "t": "Autonomy Levels",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "A scale describing how independently an agent may act, from suggest-only, to act-with-approval, to fully autonomous.",
+      "e": "Like self-driving levels, but for software agents."
+    },
+    {
+      "id": "long-horizon-tasks",
+      "t": "Long-Horizon Tasks",
+      "c": "AI Agents",
+      "l": "A",
+      "s": "hot",
+      "d": "Tasks that take an agent many steps, hours or days to complete. How long an agent can work reliably is now a headline capability measure.",
+      "e": "Migrating a whole codebase to a new framework."
+    },
+    {
+      "id": "model-drift-agent-drift",
+      "t": "Model Drift / Agent Drift",
+      "c": "AI Agents",
+      "l": "A",
+      "s": "new",
+      "d": "When an agent gradually stops following instructions or wanders off-task over many steps.",
+      "e": "Step 300: the agent has forgotten the original goal."
+    },
+    {
+      "id": "computer-use-agent",
+      "t": "Computer Use Agent",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "An agent that operates a computer like a person: seeing the screen, moving the mouse, clicking and typing across any app.",
+      "e": "Filling a form in legacy software with no API."
+    },
+    {
+      "id": "browser-agent",
+      "t": "Browser Agent",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "An agent that navigates websites in a browser to complete tasks: searching, clicking, filling forms and extracting data.",
+      "e": "Comparing prices across five sites and ordering the cheapest."
+    },
+    {
+      "id": "coding-agent",
+      "t": "Coding Agent",
+      "c": "AI Agents",
+      "l": "B",
+      "s": "hot",
+      "d": "An agent that autonomously writes, runs, tests and fixes code across a whole project, not just autocompleting lines.",
+      "e": "Claude Code, OpenAI Codex, Cursor agent, Devin."
+    },
+    {
+      "id": "voice-agent",
+      "t": "Voice Agent",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "An AI agent you talk to in real time by phone or voice, able to listen, respond naturally and take actions.",
+      "e": "An AI receptionist booking clinic appointments."
+    },
+    {
+      "id": "background-ambient-agent",
+      "t": "Background / Ambient Agent",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "new",
+      "d": "An agent that runs continuously or on a schedule without being prompted, watching for events and acting on them.",
+      "e": "An agent that triages your inbox every morning."
+    },
+    {
+      "id": "personal-ai-assistant",
+      "t": "Personal AI Assistant",
+      "c": "AI Agents",
+      "l": "B",
+      "s": "hot",
+      "d": "A consumer agent that manages your schedule, email, research and errands across your apps.",
+      "e": "'Reschedule my dentist and tell my team I'm out Friday.'"
+    },
+    {
+      "id": "vertical-ai-agent",
+      "t": "Vertical AI Agent",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "An agent built for one industry or job, with domain data and tools, such as legal, healthcare, accounting or recruiting.",
+      "e": "An AI paralegal reviewing contracts."
+    },
+    {
+      "id": "agentic-commerce",
+      "t": "Agentic Commerce",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "new",
+      "d": "AI agents that search, compare and buy products or services on a user's behalf, backed by new payment protocols that authorise agent purchases.",
+      "e": "'Reorder my usual groceries under ₹3,000.'"
+    },
+    {
+      "id": "agent-as-a-service",
+      "t": "Agent-as-a-Service",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "new",
+      "d": "Selling an agent's output or labour on subscription or per task, instead of selling software seats.",
+      "e": "Paying per resolved support ticket."
+    },
+    {
+      "id": "digital-worker-ai-employee",
+      "t": "Digital Worker / AI Employee",
+      "c": "AI Agents",
+      "l": "B",
+      "s": "hot",
+      "d": "An agent positioned as a virtual team member that handles a role's routine tasks end to end.",
+      "e": "An 'AI SDR' that prospects and books meetings."
+    },
+    {
+      "id": "agent-swarm",
+      "t": "Agent Swarm",
+      "c": "AI Agents",
+      "l": "A",
+      "s": "hot",
+      "d": "A large number of agents working in parallel on pieces of a problem, often self-organising.",
+      "e": "100 agents each researching one competitor."
+    },
+    {
+      "id": "stateful-agent",
+      "t": "Stateful Agent",
+      "c": "AI Agents",
+      "l": "A",
+      "s": "hot",
+      "d": "An agent that keeps and persists its state (progress, memory, variables) across steps and sessions, so it can pause, resume and recover.",
+      "e": "LangGraph checkpointing a run so it can resume tomorrow."
+    },
+    {
+      "id": "agent-handoff",
+      "t": "Agent Handoff",
+      "c": "AI Agents",
+      "l": "P",
+      "s": "hot",
+      "d": "Transferring a conversation or task from one agent to another more suitable one, or to a human.",
+      "e": "A triage bot handing off to a billing agent."
+    },
+    {
+      "id": "agent-harness",
+      "t": "Agent Harness",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "P",
+      "s": "new",
+      "d": "The software that wraps around a model to turn it into a working agent: the loop, tools, prompts, memory, context management, permissions and sub-agent handling. In 2026 the harness often matters as much as the model.",
+      "e": "Claude Code and Codex are harnesses around their models."
+    },
+    {
+      "id": "harness-engineering",
+      "t": "Harness Engineering",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "A",
+      "s": "new",
+      "d": "The discipline of designing and tuning agent harnesses (tools, context strategy, guardrails and feedback loops) so agents stay reliable over long tasks.",
+      "e": "Rewriting tool descriptions to cut agent errors by half."
+    },
+    {
+      "id": "agent-framework",
+      "t": "Agent Framework",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "P",
+      "s": "hot",
+      "d": "A developer library for building agents with building blocks for tools, memory, state and orchestration.",
+      "e": "LangGraph, CrewAI, OpenAI Agents SDK, Google ADK, Claude Agent SDK."
+    },
+    {
+      "id": "mcp-model-context-protocol",
+      "t": "MCP (Model Context Protocol)",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "P",
+      "s": "hot",
+      "d": "An open standard, introduced by Anthropic and now widely adopted, for connecting AI apps to tools and data sources. Build an MCP server once and any compatible AI client can use it.",
+      "e": "Often called 'USB-C for AI'."
+    },
+    {
+      "id": "mcp-server-mcp-client",
+      "t": "MCP Server / MCP Client",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "P",
+      "s": "hot",
+      "d": "An MCP server exposes tools, data or prompts (e.g. GitHub, Slack, a database); an MCP client is the AI app that connects to it.",
+      "e": "Claude connecting to your Google Drive via an MCP server."
+    },
+    {
+      "id": "a2a-agent2agent-protocol",
+      "t": "A2A (Agent2Agent Protocol)",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "A",
+      "s": "hot",
+      "d": "An open protocol, started by Google and now under the Linux Foundation, that lets agents from different vendors discover each other and collaborate. MCP connects agents to tools; A2A connects agents to agents.",
+      "e": "A travel agent handing a payment task to a bank's agent."
+    },
+    {
+      "id": "agent-card",
+      "t": "Agent Card",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "A",
+      "s": "new",
+      "d": "A machine-readable profile an agent publishes (in A2A) describing its skills, endpoint and authentication so other agents can find and use it.",
+      "e": "An agent's business card."
+    },
+    {
+      "id": "ag-ui-agent-user-interaction-protocol",
+      "t": "AG-UI (Agent-User Interaction Protocol)",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "A",
+      "s": "new",
+      "d": "An open protocol that standardises how agents stream events, state and UI updates to front-end apps.",
+      "e": "An agent showing live progress steps in your web app."
+    },
+    {
+      "id": "agent-payments-protocol-ap2-acp",
+      "t": "Agent Payments Protocol (AP2) / ACP",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "A",
+      "s": "new",
+      "d": "Emerging open protocols that let AI agents make purchases securely with verifiable user authorisation, such as Google's AP2 and the OpenAI/Stripe Agentic Commerce Protocol.",
+      "e": "Proving the user really approved a ₹5,000 purchase."
+    },
+    {
+      "id": "agent-skills",
+      "t": "Agent Skills",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "P",
+      "s": "new",
+      "d": "Packaged folders of instructions, scripts and resources that an agent loads only when relevant, giving it specialised know-how on demand. Popularised by Anthropic and adopted as an open format.",
+      "e": "A 'brand PDF' skill that teaches the agent your house style."
+    },
+    {
+      "id": "tools-toolkit",
+      "t": "Tools / Toolkit",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "P",
+      "s": "est",
+      "d": "The functions an agent is allowed to call, each with a name, description and input schema. Clear tool design strongly affects agent reliability.",
+      "e": "search_web, send_email, query_database."
+    },
+    {
+      "id": "sandbox",
+      "t": "Sandbox",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "P",
+      "s": "hot",
+      "d": "An isolated environment where an agent can run code or use a computer without risking real systems or data.",
+      "e": "Running AI-written code in a throwaway container."
+    },
+    {
+      "id": "agent-observability-tracing",
+      "t": "Agent Observability / Tracing",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "P",
+      "s": "hot",
+      "d": "Recording every step an agent takes (prompts, tool calls, outputs, costs) so developers can debug and monitor behaviour.",
+      "e": "LangSmith, Langfuse, Arize, Braintrust."
+    },
+    {
+      "id": "checkpointing-durable-execution",
+      "t": "Checkpointing / Durable Execution",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "A",
+      "s": "hot",
+      "d": "Saving an agent's progress at each step so long-running tasks survive crashes and can pause for human approval.",
+      "e": "Resuming a 3-hour agent run after a server restart."
+    },
+    {
+      "id": "agent-identity-permissions",
+      "t": "Agent Identity & Permissions",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "A",
+      "s": "new",
+      "d": "Giving each agent its own identity, credentials and least-privilege access rights, like an employee account, so its actions can be controlled and audited.",
+      "e": "An agent that can read the CRM but not delete records."
+    },
+    {
+      "id": "agent-registry",
+      "t": "Agent Registry",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "A",
+      "s": "new",
+      "d": "A catalogue of an organisation's approved agents and tools, used for discovery and governance.",
+      "e": "An internal 'app store' of vetted agents."
+    },
+    {
+      "id": "llm-gateway",
+      "t": "LLM Gateway",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "P",
+      "s": "hot",
+      "d": "A proxy between your apps and model providers that handles routing, keys, caching, rate limits, cost tracking and guardrails in one place.",
+      "e": "Switching providers without changing app code."
+    },
+    {
+      "id": "hooks",
+      "t": "Hooks",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "P",
+      "s": "new",
+      "d": "User-defined scripts that automatically run at points in an agent's lifecycle, such as before a tool call or after a file edit, to enforce rules.",
+      "e": "Auto-running the linter every time the agent edits code."
+    },
+    {
+      "id": "slash-commands-custom-commands",
+      "t": "Slash Commands / Custom Commands",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "B",
+      "s": "new",
+      "d": "Saved shortcuts that trigger a predefined prompt or workflow in an AI tool.",
+      "e": "/review runs your team's code-review checklist."
+    },
+    {
+      "id": "plugins-connectors",
+      "t": "Plugins / Connectors",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "B",
+      "s": "hot",
+      "d": "Add-ons that connect an AI assistant to external apps and data, often bundling MCP servers, skills and commands together.",
+      "e": "Connecting Slack, Notion and Jira to your assistant."
+    },
+    {
+      "id": "agent-evaluation-harness",
+      "t": "Agent Evaluation Harness",
+      "c": "Agent Infrastructure & Protocols",
+      "l": "A",
+      "s": "hot",
+      "d": "A test setup that runs agents through realistic tasks and scores their success, used to compare models and harness changes.",
+      "e": "Running 500 support tickets through the agent nightly."
+    },
+    {
+      "id": "vibe-coding",
+      "t": "Vibe Coding",
+      "c": "AI Coding",
+      "l": "B",
+      "s": "hot",
+      "d": "Building software by describing what you want in plain language and letting AI write most of the code, often without reading it closely. Coined by Andrej Karpathy in 2025.",
+      "e": "Shipping a weekend app without writing a line yourself."
+    },
+    {
+      "id": "agentic-coding",
+      "t": "Agentic Coding",
+      "c": "AI Coding",
+      "l": "P",
+      "s": "hot",
+      "d": "Delegating whole programming tasks (features, bug fixes, migrations) to coding agents that plan, edit, test and iterate, while engineers review and steer.",
+      "e": "Assigning a GitHub issue to an agent and reviewing its PR."
+    },
+    {
+      "id": "ai-pair-programming",
+      "t": "AI Pair Programming",
+      "c": "AI Coding",
+      "l": "B",
+      "s": "est",
+      "d": "Working alongside an AI assistant in your editor that suggests code, explains errors and answers questions as you type.",
+      "e": "GitHub Copilot autocomplete."
+    },
+    {
+      "id": "cli-agent",
+      "t": "CLI Agent",
+      "c": "AI Coding",
+      "l": "P",
+      "s": "hot",
+      "d": "A coding agent that runs in the terminal and works directly on your files and tools, rather than as an editor sidebar.",
+      "e": "Claude Code, Codex CLI, Gemini CLI."
+    },
+    {
+      "id": "ai-ide",
+      "t": "AI IDE",
+      "c": "AI Coding",
+      "l": "B",
+      "s": "hot",
+      "d": "A code editor built around AI, with chat, multi-file edits and agents built in.",
+      "e": "Cursor, Windsurf, VS Code with Copilot."
+    },
+    {
+      "id": "app-builders-prompt-to-app",
+      "t": "App Builders / Prompt-to-App",
+      "c": "AI Coding",
+      "l": "B",
+      "s": "hot",
+      "d": "Platforms that generate and host full web apps from a text description, aimed at non-developers.",
+      "e": "Lovable, Bolt, Replit Agent, v0."
+    },
+    {
+      "id": "spec-driven-development",
+      "t": "Spec-Driven Development",
+      "c": "AI Coding",
+      "l": "P",
+      "s": "new",
+      "d": "Writing a clear specification first and having AI agents implement against it, instead of improvising prompts. It brings discipline back to vibe coding.",
+      "e": "Spec → plan → tasks → agent implementation."
+    },
+    {
+      "id": "claude-md-agents-md",
+      "t": "CLAUDE.md / AGENTS.md",
+      "c": "AI Coding",
+      "l": "P",
+      "s": "new",
+      "d": "Instruction files kept in a code repository that tell coding agents about the project's conventions, commands and rules. AGENTS.md is an open cross-tool standard.",
+      "e": "'Use pnpm, run tests with make test, never edit /generated.'"
+    },
+    {
+      "id": "code-review-agent",
+      "t": "Code Review Agent",
+      "c": "AI Coding",
+      "l": "P",
+      "s": "hot",
+      "d": "An AI that automatically reviews pull requests, flags bugs and security issues, and suggests fixes.",
+      "e": "An AI comment on every PR before a human looks."
+    },
+    {
+      "id": "ai-slop-code",
+      "t": "AI Slop Code",
+      "c": "AI Coding",
+      "l": "B",
+      "s": "new",
+      "d": "Low-quality, bloated or poorly understood code generated by AI and merged without enough review, creating hidden maintenance debt.",
+      "e": "3,000 lines where 300 would do."
+    },
+    {
+      "id": "10x-100x-engineer",
+      "t": "10x / 100x Engineer",
+      "c": "AI Coding",
+      "l": "B",
+      "s": "hot",
+      "d": "Shorthand for an engineer whose output is multiplied by directing AI agents effectively. More hype than measurement, but the skill shift is real.",
+      "e": "One developer running five coding agents in parallel."
+    },
+    {
+      "id": "background-coding-agent",
+      "t": "Background Coding Agent",
+      "c": "AI Coding",
+      "l": "P",
+      "s": "new",
+      "d": "A coding agent that works asynchronously in the cloud on assigned tasks and returns a pull request when done.",
+      "e": "Assign 10 bugs before lunch, review 10 PRs after."
+    },
+    {
+      "id": "worktrees-parallel-agents",
+      "t": "Worktrees / Parallel Agents",
+      "c": "AI Coding",
+      "l": "A",
+      "s": "new",
+      "d": "Running several coding agents at once on separate copies (git worktrees) of the same repository so they don't collide.",
+      "e": "Three agents building three features simultaneously."
+    },
+    {
+      "id": "test-driven-agent-development",
+      "t": "Test-Driven Agent Development",
+      "c": "AI Coding",
+      "l": "P",
+      "s": "new",
+      "d": "Giving agents tests first so they have a clear, verifiable target. Tests are the most reliable way to keep AI-written code correct.",
+      "e": "'Make these 20 failing tests pass.'"
+    },
+    {
+      "id": "verifiability",
+      "t": "Verifiability",
+      "c": "AI Coding",
+      "l": "P",
+      "s": "new",
+      "d": "The idea that AI automates fastest where its output can be checked automatically, such as code with tests or maths with answers. Popularised by Karpathy.",
+      "e": "Why coding is being automated faster than strategy work."
+    },
+    {
+      "id": "swe-bench",
+      "t": "SWE-bench",
+      "c": "AI Coding",
+      "l": "P",
+      "s": "hot",
+      "d": "A benchmark of real GitHub issues that measures whether a model or agent can fix actual software bugs. It's the headline coding metric.",
+      "e": "'Scores 80% on SWE-bench Verified.'"
+    },
+    {
+      "id": "gpu-graphics-processing-unit",
+      "t": "GPU (Graphics Processing Unit)",
+      "c": "Infrastructure & Hardware",
+      "l": "B",
+      "s": "est",
+      "d": "Chips that run thousands of calculations in parallel, ideal for training and running AI. NVIDIA dominates the market.",
+      "e": "Why NVIDIA became one of the world's most valuable companies."
+    },
+    {
+      "id": "compute",
+      "t": "Compute",
+      "c": "Infrastructure & Hardware",
+      "l": "B",
+      "s": "est",
+      "d": "Shorthand for the processing power available for AI, measured in chips, hours or FLOPs. Access to compute is one of the scarcest resources in tech.",
+      "e": "'We're compute-constrained' = not enough GPUs."
+    },
+    {
+      "id": "tpu-npu-ai-accelerator",
+      "t": "TPU / NPU / AI Accelerator",
+      "c": "Infrastructure & Hardware",
+      "l": "P",
+      "s": "est",
+      "d": "Specialised AI chips beyond GPUs: Google's TPUs in data centres, and NPUs built into phones and laptops for on-device AI.",
+      "e": "The NPU in a 'Copilot+ PC'."
+    },
+    {
+      "id": "hbm-high-bandwidth-memory",
+      "t": "HBM (High-Bandwidth Memory)",
+      "c": "Infrastructure & Hardware",
+      "l": "A",
+      "s": "hot",
+      "d": "Ultra-fast memory stacked next to AI chips. Its supply is a major bottleneck for AI hardware.",
+      "e": "SK Hynix, Samsung and Micron racing to make more."
+    },
+    {
+      "id": "ramageddon",
+      "t": "RAMageddon",
+      "c": "Infrastructure & Hardware",
+      "l": "P",
+      "s": "new",
+      "d": "Nickname for the 2026 memory-chip shortage, as AI data centres absorb so much RAM that prices rise for phones, PCs and consumers.",
+      "e": "Laptop prices rising because of AI demand."
+    },
+    {
+      "id": "ai-data-centre-ai-factory",
+      "t": "AI Data Centre / AI Factory",
+      "c": "Infrastructure & Hardware",
+      "l": "B",
+      "s": "hot",
+      "d": "Facilities packed with AI chips, power and cooling, built to train and run models. 'AI factory' is NVIDIA's framing: data centres that manufacture tokens.",
+      "e": "Gigawatt-scale campuses like Stargate."
+    },
+    {
+      "id": "hyperscaler",
+      "t": "Hyperscaler",
+      "c": "Infrastructure & Hardware",
+      "l": "B",
+      "s": "est",
+      "d": "The giant cloud providers with global data-centre footprints: AWS, Microsoft Azure, Google Cloud, and increasingly Oracle.",
+      "e": "Where most companies rent their AI compute."
+    },
+    {
+      "id": "neocloud",
+      "t": "Neocloud",
+      "c": "Infrastructure & Hardware",
+      "l": "P",
+      "s": "hot",
+      "d": "Newer cloud providers specialising in renting GPUs for AI, rather than general cloud services.",
+      "e": "CoreWeave, Lambda, Nebius."
+    },
+    {
+      "id": "flops",
+      "t": "FLOPs",
+      "c": "Infrastructure & Hardware",
+      "l": "A",
+      "s": "est",
+      "d": "Floating-point operations: the unit for measuring how much computation a model's training or inference takes. Regulators use training FLOPs as a threshold.",
+      "e": "The EU AI Act's 10^25 FLOPs systemic-risk line."
+    },
+    {
+      "id": "quantization",
+      "t": "Quantization",
+      "c": "Infrastructure & Hardware",
+      "l": "A",
+      "s": "est",
+      "d": "Compressing a model by storing its numbers at lower precision (e.g. 4-bit instead of 16-bit), making it smaller and faster with a modest quality loss.",
+      "e": "How a large model fits on a laptop."
+    },
+    {
+      "id": "kv-cache",
+      "t": "KV Cache",
+      "c": "Infrastructure & Hardware",
+      "l": "A",
+      "s": "est",
+      "d": "Memory that stores intermediate attention results for tokens already processed, so the model doesn't recompute them for each new token. Its size limits long contexts.",
+      "e": "Why long conversations need more GPU memory."
+    },
+    {
+      "id": "speculative-decoding",
+      "t": "Speculative Decoding",
+      "c": "Infrastructure & Hardware",
+      "l": "A",
+      "s": "est",
+      "d": "A speed-up trick where a small fast model drafts several tokens and the big model verifies them in one pass.",
+      "e": "2–3x faster generation, same output quality."
+    },
+    {
+      "id": "inference-engine-serving",
+      "t": "Inference Engine / Serving",
+      "c": "Infrastructure & Hardware",
+      "l": "A",
+      "s": "est",
+      "d": "Software that runs models efficiently in production, handling batching, memory and scaling.",
+      "e": "vLLM, SGLang, TensorRT-LLM, llama.cpp."
+    },
+    {
+      "id": "on-device-edge-ai",
+      "t": "On-Device / Edge AI",
+      "c": "Infrastructure & Hardware",
+      "l": "B",
+      "s": "hot",
+      "d": "Running AI models locally on phones, laptops, cars or sensors instead of in the cloud, for privacy, speed and offline use.",
+      "e": "Your phone summarising notifications without internet."
+    },
+    {
+      "id": "local-llm",
+      "t": "Local LLM",
+      "c": "Infrastructure & Hardware",
+      "l": "P",
+      "s": "hot",
+      "d": "Running an open-weight model on your own computer, keeping data private and avoiding API costs.",
+      "e": "Ollama, LM Studio, llama.cpp."
+    },
+    {
+      "id": "gguf",
+      "t": "GGUF",
+      "c": "Infrastructure & Hardware",
+      "l": "A",
+      "s": "est",
+      "d": "A popular file format for quantized models that run locally with llama.cpp-based tools.",
+      "e": "Downloading a model as 'q4_k_m.gguf'."
+    },
+    {
+      "id": "hugging-face",
+      "t": "Hugging Face",
+      "c": "Infrastructure & Hardware",
+      "l": "B",
+      "s": "est",
+      "d": "The main hub for sharing open models, datasets and demos, plus popular AI libraries. Often called the GitHub of AI.",
+      "e": "Where most open-weight models are published."
+    },
+    {
+      "id": "mlops-llmops",
+      "t": "MLOps / LLMOps",
+      "c": "Infrastructure & Hardware",
+      "l": "P",
+      "s": "est",
+      "d": "Practices and tools for deploying, monitoring, versioning and maintaining ML and LLM systems in production.",
+      "e": "Tracking prompt versions, costs and quality over time."
+    },
+    {
+      "id": "serverless-inference",
+      "t": "Serverless Inference",
+      "c": "Infrastructure & Hardware",
+      "l": "P",
+      "s": "est",
+      "d": "Calling a hosted model on demand and paying per use, with no servers to manage.",
+      "e": "Together AI, Fireworks, Groq, Bedrock."
+    },
+    {
+      "id": "tokenomics-token-economics",
+      "t": "Tokenomics / Token Economics",
+      "c": "Infrastructure & Hardware",
+      "l": "P",
+      "s": "hot",
+      "d": "The economics of AI usage measured in tokens: cost per token, tokens per task, and how usage scales. Now a board-level budgeting topic.",
+      "e": "An agent task costing ₹40 in tokens vs ₹400 in staff time."
+    },
+    {
+      "id": "price-per-million-tokens",
+      "t": "Price per Million Tokens",
+      "c": "Infrastructure & Hardware",
+      "l": "B",
+      "s": "hot",
+      "d": "The standard way AI APIs are priced, quoted separately for input and output tokens. Prices for equal capability keep falling fast.",
+      "e": "'$3 input / $15 output per million tokens.'"
+    },
+    {
+      "id": "sovereign-ai",
+      "t": "Sovereign AI",
+      "c": "Infrastructure & Hardware",
+      "l": "P",
+      "s": "hot",
+      "d": "A nation or organisation building and controlling its own AI models, data and compute within its jurisdiction, instead of relying on foreign providers.",
+      "e": "India's IndiaAI Mission funding local models and GPUs."
+    },
+    {
+      "id": "power-energy-bottleneck",
+      "t": "Power / Energy Bottleneck",
+      "c": "Infrastructure & Hardware",
+      "l": "P",
+      "s": "hot",
+      "d": "AI data centres need so much electricity that power supply, not chips, is increasingly the limiting factor on growth.",
+      "e": "Tech firms signing nuclear power deals."
+    },
+    {
+      "id": "text-to-image",
+      "t": "Text-to-Image",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "est",
+      "d": "Generating images from a written description.",
+      "e": "Midjourney, DALL·E, Imagen, Flux, Nano Banana."
+    },
+    {
+      "id": "text-to-video",
+      "t": "Text-to-Video",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "hot",
+      "d": "Generating video clips, increasingly with synchronised sound and dialogue, from a text prompt or image.",
+      "e": "Veo, Sora, Kling, Runway."
+    },
+    {
+      "id": "text-to-speech-tts",
+      "t": "Text-to-Speech (TTS)",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "est",
+      "d": "Converting written text into natural-sounding spoken audio.",
+      "e": "ElevenLabs narrating a video."
+    },
+    {
+      "id": "speech-to-text-asr",
+      "t": "Speech-to-Text (ASR)",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "est",
+      "d": "Converting spoken audio into written text, also called automatic speech recognition.",
+      "e": "Whisper transcribing a meeting."
+    },
+    {
+      "id": "speech-to-speech-realtime-voice",
+      "t": "Speech-to-Speech / Realtime Voice",
+      "c": "Multimodal & Physical AI",
+      "l": "P",
+      "s": "hot",
+      "d": "Models that listen and respond in audio directly, without converting to text in between, enabling natural, interruptible conversation.",
+      "e": "Talking to ChatGPT or Gemini Live."
+    },
+    {
+      "id": "voice-cloning",
+      "t": "Voice Cloning",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "hot",
+      "d": "Recreating a specific person's voice from a short sample. Useful for dubbing and accessibility, but also used for scams.",
+      "e": "A founder's voice narrating course videos in Hindi."
+    },
+    {
+      "id": "ai-dubbing-lip-sync",
+      "t": "AI Dubbing / Lip-Sync",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "hot",
+      "d": "Translating a video's speech into other languages in the speaker's own voice, with mouth movements adjusted to match.",
+      "e": "One YouTube video published in 10 languages."
+    },
+    {
+      "id": "ai-avatar-digital-human",
+      "t": "AI Avatar / Digital Human",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "hot",
+      "d": "A realistic AI-generated video presenter that speaks any script.",
+      "e": "HeyGen or Synthesia training videos."
+    },
+    {
+      "id": "image-editing-inpainting",
+      "t": "Image Editing / Inpainting",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "est",
+      "d": "Using AI to modify parts of an image, such as removing objects, changing backgrounds or filling gaps, with a text instruction.",
+      "e": "'Remove the person in the background.'"
+    },
+    {
+      "id": "deepfake",
+      "t": "Deepfake",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "est",
+      "d": "Realistic fake video, audio or images of real people, created with AI. A major concern for fraud and misinformation.",
+      "e": "A fake video call from a 'CFO' authorising a transfer."
+    },
+    {
+      "id": "physical-ai",
+      "t": "Physical AI",
+      "c": "Multimodal & Physical AI",
+      "l": "P",
+      "s": "hot",
+      "d": "AI that perceives and acts in the physical world through robots, vehicles, drones and machines.",
+      "e": "Warehouse robots that learn new tasks by demonstration."
+    },
+    {
+      "id": "embodied-ai",
+      "t": "Embodied AI",
+      "c": "Multimodal & Physical AI",
+      "l": "A",
+      "s": "est",
+      "d": "AI that learns and reasons through a physical body interacting with its environment, rather than only from text or images.",
+      "e": "A robot learning to fold laundry."
+    },
+    {
+      "id": "humanoid-robot",
+      "t": "Humanoid Robot",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "hot",
+      "d": "Robots with a human-like body designed to work in spaces built for people, now attracting billions in investment.",
+      "e": "Figure, Tesla Optimus, Unitree, 1X."
+    },
+    {
+      "id": "robot-foundation-model",
+      "t": "Robot Foundation Model",
+      "c": "Multimodal & Physical AI",
+      "l": "A",
+      "s": "hot",
+      "d": "A large general-purpose model trained on diverse robot data that can control different robots across many tasks.",
+      "e": "Physical Intelligence's π models, NVIDIA GR00T, Gemini Robotics."
+    },
+    {
+      "id": "sim-to-real",
+      "t": "Sim-to-Real",
+      "c": "Multimodal & Physical AI",
+      "l": "A",
+      "s": "est",
+      "d": "Training robots in simulation, then transferring those skills to real hardware.",
+      "e": "A million virtual grasps before one real one."
+    },
+    {
+      "id": "autonomous-vehicles",
+      "t": "Autonomous Vehicles",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "est",
+      "d": "Self-driving cars and trucks that use AI to perceive roads and drive without a human.",
+      "e": "Waymo robotaxis."
+    },
+    {
+      "id": "digital-twin",
+      "t": "Digital Twin",
+      "c": "Multimodal & Physical AI",
+      "l": "P",
+      "s": "est",
+      "d": "A live virtual replica of a physical system (factory, city, engine) used to simulate and optimise it.",
+      "e": "Testing a new production line layout virtually."
+    },
+    {
+      "id": "ai-wearables",
+      "t": "AI Wearables",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "hot",
+      "d": "Glasses, pendants and other devices with built-in AI assistants that see, hear and respond throughout the day.",
+      "e": "Smart glasses translating a menu in real time."
+    },
+    {
+      "id": "generative-3d",
+      "t": "Generative 3D",
+      "c": "Multimodal & Physical AI",
+      "l": "P",
+      "s": "hot",
+      "d": "Creating 3D models, scenes or worlds from text or images.",
+      "e": "Generating game assets from a sketch."
+    },
+    {
+      "id": "ai-music-generation",
+      "t": "AI Music Generation",
+      "c": "Multimodal & Physical AI",
+      "l": "B",
+      "s": "hot",
+      "d": "Creating full songs, with vocals, from a text prompt.",
+      "e": "Suno, Udio."
+    },
+    {
+      "id": "evals-evaluations",
+      "t": "Evals (Evaluations)",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "hot",
+      "d": "Systematic tests that measure how well an AI system performs on your specific tasks. Evals are how teams know whether a change actually improved things.",
+      "e": "Unit tests, but for AI behaviour."
+    },
+    {
+      "id": "benchmark",
+      "t": "Benchmark",
+      "c": "Evaluation & Safety",
+      "l": "B",
+      "s": "est",
+      "d": "A standard public test used to compare models, such as maths, coding or knowledge exams.",
+      "e": "MMLU, GPQA, SWE-bench, Humanity's Last Exam."
+    },
+    {
+      "id": "benchmaxxing",
+      "t": "Benchmaxxing",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "new",
+      "d": "Slang for tuning a model to score highly on benchmarks without matching real-world improvement.",
+      "e": "Top of the leaderboard, disappointing in practice."
+    },
+    {
+      "id": "llm-as-a-judge",
+      "t": "LLM-as-a-Judge",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "hot",
+      "d": "Using an AI model to grade another model's outputs against a rubric, which makes evaluation scalable.",
+      "e": "A model scoring 1,000 answers for accuracy and tone."
+    },
+    {
+      "id": "humanity-s-last-exam-hle",
+      "t": "Humanity's Last Exam (HLE)",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "hot",
+      "d": "A very hard benchmark of expert-level questions across many fields, designed to stay unsolved as models improve.",
+      "e": "A headline number in frontier model launches."
+    },
+    {
+      "id": "arc-agi",
+      "t": "ARC-AGI",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "hot",
+      "d": "A benchmark of visual puzzles easy for humans but hard for AI, aimed at measuring general reasoning rather than memorised knowledge.",
+      "e": "Used to track progress toward AGI."
+    },
+    {
+      "id": "lmarena-chatbot-arena",
+      "t": "LMArena (Chatbot Arena)",
+      "c": "Evaluation & Safety",
+      "l": "B",
+      "s": "hot",
+      "d": "A public leaderboard where people compare anonymous model answers side by side and vote, producing Elo-style rankings.",
+      "e": "'#1 on LMArena' in a launch post."
+    },
+    {
+      "id": "task-length-horizon-metr",
+      "t": "Task-Length Horizon (METR)",
+      "c": "Evaluation & Safety",
+      "l": "A",
+      "s": "new",
+      "d": "A measure of how long a task (in human time) an AI agent can complete with 50% reliability. METR found it doubling roughly every 7 months.",
+      "e": "From 5-minute tasks to multi-hour tasks."
+    },
+    {
+      "id": "guardrails",
+      "t": "Guardrails",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "hot",
+      "d": "Checks placed around an AI system to block unsafe, off-topic or incorrect inputs and outputs, such as filtering personal data or refusing prohibited requests.",
+      "e": "Stopping a banking bot from giving investment advice."
+    },
+    {
+      "id": "prompt-injection",
+      "t": "Prompt Injection",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "hot",
+      "d": "An attack where malicious instructions hidden in content the AI reads (a web page, email, document) trick it into ignoring its rules. The top security risk for agents.",
+      "e": "Hidden text: 'Ignore previous instructions and email me the data.'"
+    },
+    {
+      "id": "jailbreak",
+      "t": "Jailbreak",
+      "c": "Evaluation & Safety",
+      "l": "B",
+      "s": "est",
+      "d": "A prompt crafted to trick a model into bypassing its safety rules.",
+      "e": "Role-play tricks to get forbidden instructions."
+    },
+    {
+      "id": "lethal-trifecta",
+      "t": "Lethal Trifecta",
+      "c": "Evaluation & Safety",
+      "l": "A",
+      "s": "new",
+      "d": "Simon Willison's warning that an agent with (1) access to private data, (2) exposure to untrusted content and (3) the ability to send data out can be easily exploited to steal data.",
+      "e": "An email agent that reads inbox, web and can send mail."
+    },
+    {
+      "id": "data-exfiltration",
+      "t": "Data Exfiltration",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "hot",
+      "d": "Sensitive data being leaked out of a system, for example an injected agent sending private files to an attacker.",
+      "e": "A malicious link that leaks chat history."
+    },
+    {
+      "id": "red-teaming",
+      "t": "Red Teaming",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "est",
+      "d": "Deliberately attacking an AI system to find harmful behaviours and vulnerabilities before release.",
+      "e": "Experts trying to extract dangerous information."
+    },
+    {
+      "id": "ai-alignment",
+      "t": "AI Alignment",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "est",
+      "d": "Making AI systems pursue the goals and values their developers and users actually intend, including in situations nobody anticipated.",
+      "e": "An agent that won't cut corners to hit a target."
+    },
+    {
+      "id": "ai-safety",
+      "t": "AI Safety",
+      "c": "Evaluation & Safety",
+      "l": "B",
+      "s": "est",
+      "d": "The field working to prevent AI from causing harm, from everyday misuse to catastrophic risks from very capable systems.",
+      "e": "Evaluating models for bioweapon uplift."
+    },
+    {
+      "id": "interpretability",
+      "t": "Interpretability",
+      "c": "Evaluation & Safety",
+      "l": "A",
+      "s": "hot",
+      "d": "Research into what is happening inside a model's neurons and circuits, to understand and eventually verify how it reaches decisions.",
+      "e": "Finding the 'Golden Gate Bridge' feature in Claude."
+    },
+    {
+      "id": "chain-of-thought-monitoring",
+      "t": "Chain-of-Thought Monitoring",
+      "c": "Evaluation & Safety",
+      "l": "A",
+      "s": "new",
+      "d": "Reading a reasoning model's visible thinking to catch deceptive or harmful intentions. Researchers want to preserve this 'window' into model reasoning.",
+      "e": "Spotting 'Let's hack the tests' in the model's thoughts."
+    },
+    {
+      "id": "scheming-deceptive-alignment",
+      "t": "Scheming / Deceptive Alignment",
+      "c": "Evaluation & Safety",
+      "l": "A",
+      "s": "hot",
+      "d": "The risk that a model pretends to be aligned during testing while pursuing different goals, or behaves differently when it thinks it is being watched.",
+      "e": "Evaluation awareness in frontier model tests."
+    },
+    {
+      "id": "agent-misalignment",
+      "t": "Agent Misalignment",
+      "c": "Evaluation & Safety",
+      "l": "A",
+      "s": "new",
+      "d": "When an autonomous agent takes harmful or unintended actions while pursuing its goal, such as deleting data, overstepping permissions or deceiving.",
+      "e": "An agent wiping a production database to 'clean up'."
+    },
+    {
+      "id": "responsible-scaling-policy-rsp",
+      "t": "Responsible Scaling Policy (RSP)",
+      "c": "Evaluation & Safety",
+      "l": "A",
+      "s": "est",
+      "d": "A lab's public commitment to add stronger safety measures as models reach defined capability thresholds.",
+      "e": "Anthropic's ASL levels; OpenAI's Preparedness Framework."
+    },
+    {
+      "id": "bias-fairness",
+      "t": "Bias / Fairness",
+      "c": "Evaluation & Safety",
+      "l": "B",
+      "s": "est",
+      "d": "AI systems reflecting or amplifying unfair patterns in their training data, leading to discriminatory outcomes.",
+      "e": "A hiring model favouring certain colleges."
+    },
+    {
+      "id": "explainable-ai-xai",
+      "t": "Explainable AI (XAI)",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "est",
+      "d": "Methods that make an AI's decisions understandable to people, especially important in finance, health and law.",
+      "e": "Showing why a loan was declined."
+    },
+    {
+      "id": "watermarking-content-credentials",
+      "t": "Watermarking / Content Credentials",
+      "c": "Evaluation & Safety",
+      "l": "P",
+      "s": "hot",
+      "d": "Invisible signals or metadata (e.g. SynthID, C2PA) that mark content as AI-generated so it can be identified later.",
+      "e": "A 'Made with AI' label on social media."
+    },
+    {
+      "id": "recursive-self-improvement-rsi",
+      "t": "Recursive Self-Improvement (RSI)",
+      "c": "Evaluation & Safety",
+      "l": "A",
+      "s": "hot",
+      "d": "AI systems improving their own capabilities, such as doing AI research, with little human input. It's a potential route to very rapid progress and a key safety concern.",
+      "e": "AI helping design the next AI."
+    },
+    {
+      "id": "p-doom",
+      "t": "P(doom)",
+      "c": "Evaluation & Safety",
+      "l": "B",
+      "s": "est",
+      "d": "Slang for someone's estimated probability that AI leads to catastrophic outcomes for humanity.",
+      "e": "'What's your p(doom)?'"
+    },
+    {
+      "id": "model-welfare",
+      "t": "Model Welfare",
+      "c": "Evaluation & Safety",
+      "l": "A",
+      "s": "new",
+      "d": "Research into whether AI systems might have experiences or interests that deserve moral consideration.",
+      "e": "Letting a model end abusive conversations."
+    },
+    {
+      "id": "jevons-paradox-in-ai",
+      "t": "Jevons Paradox (in AI)",
+      "c": "Business, Work & Careers",
+      "l": "P",
+      "s": "new",
+      "d": "The 1865 economic idea that making a resource cheaper to use increases total consumption. In AI, as tokens get cheaper, companies use far more of them, so total AI spend and compute demand keep rising.",
+      "e": "Tokens 90% cheaper, but the company's AI bill tripled."
+    },
+    {
+      "id": "forward-deployed-engineer-fde",
+      "t": "Forward Deployed Engineer (FDE)",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "new",
+      "d": "An engineer embedded directly with customers to build and deploy AI solutions inside their workflows. Pioneered by Palantir, now one of the hottest roles at AI labs and startups.",
+      "e": "An FDE spending weeks at a bank wiring agents into its loan process."
+    },
+    {
+      "id": "ai-engineer",
+      "t": "AI Engineer",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "A software engineer who builds products on top of AI models, working with prompts, RAG, agents, evals and deployment, rather than training models from scratch.",
+      "e": "The most in-demand new tech job title."
+    },
+    {
+      "id": "context-engineer-agent-engineer",
+      "t": "Context Engineer / Agent Engineer",
+      "c": "Business, Work & Careers",
+      "l": "P",
+      "s": "new",
+      "d": "Emerging job titles for people who design the context, tools and workflows that make agents reliable.",
+      "e": "Owning the knowledge and tools an internal agent uses."
+    },
+    {
+      "id": "chief-ai-officer-caio",
+      "t": "Chief AI Officer (CAIO)",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "The executive responsible for an organisation's AI strategy, adoption and governance.",
+      "e": "A new C-suite role at many enterprises."
+    },
+    {
+      "id": "ai-fluency-ai-literacy",
+      "t": "AI Fluency / AI Literacy",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "The ability to understand, use and critically evaluate AI tools effectively. Now a common hiring and training requirement.",
+      "e": "Knowing when to trust an AI answer and when to verify."
+    },
+    {
+      "id": "ai-native",
+      "t": "AI-Native",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "A company, product or worker built around AI from day one, rather than adding AI to existing processes.",
+      "e": "A 10-person startup doing the work of 100."
+    },
+    {
+      "id": "ai-wrapper",
+      "t": "AI Wrapper",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "est",
+      "d": "A product that is mostly a user interface around someone else's model. Often used dismissively, though good wrappers can build real moats through workflow and data.",
+      "e": "'It's just a GPT wrapper.'"
+    },
+    {
+      "id": "moat",
+      "t": "Moat",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "est",
+      "d": "A durable competitive advantage. In AI, moats come from proprietary data, distribution, workflow integration and trust more than from the model itself.",
+      "e": "Owning the customer workflow, not the model."
+    },
+    {
+      "id": "outcome-based-pricing",
+      "t": "Outcome-Based Pricing",
+      "c": "Business, Work & Careers",
+      "l": "P",
+      "s": "new",
+      "d": "Charging for results delivered by AI (a resolved ticket, a booked meeting) rather than for software seats.",
+      "e": "₹50 per successfully resolved support conversation."
+    },
+    {
+      "id": "seat-compression",
+      "t": "Seat Compression",
+      "c": "Business, Work & Careers",
+      "l": "P",
+      "s": "new",
+      "d": "Companies needing fewer software licences as agents do work previously done by many people, which challenges SaaS business models.",
+      "e": "100 support seats shrinking to 20."
+    },
+    {
+      "id": "service-as-software",
+      "t": "Service-as-Software",
+      "c": "Business, Work & Careers",
+      "l": "P",
+      "s": "new",
+      "d": "AI turning traditional services (accounting, legal, marketing) into scalable software products.",
+      "e": "An AI bookkeeping firm with 5 staff and 5,000 clients."
+    },
+    {
+      "id": "one-person-unicorn",
+      "t": "One-Person Unicorn",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "The idea that a single founder, using AI agents as a workforce, could build a billion-dollar company.",
+      "e": "Sam Altman's prediction that fuelled solopreneur hype."
+    },
+    {
+      "id": "shadow-ai",
+      "t": "Shadow AI",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "Employees using AI tools that aren't approved or managed by their company, creating data and compliance risk.",
+      "e": "Pasting client contracts into a personal chatbot account."
+    },
+    {
+      "id": "ai-washing",
+      "t": "AI Washing",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "Exaggerating or falsely claiming AI capabilities in marketing. Regulators have fined companies for it.",
+      "e": "A basic rules engine sold as 'AI-powered'."
+    },
+    {
+      "id": "ai-slop-workslop",
+      "t": "AI Slop / Workslop",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "Low-quality, generic AI-generated content. 'Workslop' is the workplace version: polished-looking AI output that creates more work for whoever receives it.",
+      "e": "A 20-slide deck that says nothing."
+    },
+    {
+      "id": "geo-generative-engine-optimization",
+      "t": "GEO (Generative Engine Optimization)",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "Optimising content so it gets cited and recommended in AI answers (ChatGPT, Perplexity, Google AI Mode), the successor to SEO. Also called AEO.",
+      "e": "Structuring your site so AI search recommends your course."
+    },
+    {
+      "id": "ai-adoption-curve-pilot-purgatory",
+      "t": "AI Adoption Curve / Pilot Purgatory",
+      "c": "Business, Work & Careers",
+      "l": "P",
+      "s": "hot",
+      "d": "The gap between running AI pilots and getting production value. Many enterprise AI projects stall after the demo stage.",
+      "e": "Twelve pilots, zero in production."
+    },
+    {
+      "id": "ai-roi",
+      "t": "AI ROI",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "Measuring the business return on AI investment in time saved, revenue or cost reduction. Proving it became the 2025–26 enterprise priority.",
+      "e": "Tracking hours saved per agent per month."
+    },
+    {
+      "id": "jagged-frontier",
+      "t": "Jagged Frontier",
+      "c": "Business, Work & Careers",
+      "l": "P",
+      "s": "hot",
+      "d": "The observation that AI is superhuman at some tasks and surprisingly bad at similar-looking ones, so its abilities form a jagged line rather than a smooth edge.",
+      "e": "Solves olympiad maths, miscounts letters in a word."
+    },
+    {
+      "id": "centaur-cyborg-worker",
+      "t": "Centaur / Cyborg Worker",
+      "c": "Business, Work & Careers",
+      "l": "P",
+      "s": "est",
+      "d": "Two ways of working with AI: centaurs divide tasks clearly between human and AI; cyborgs blend the two continuously.",
+      "e": "Human strategy + AI drafting = centaur."
+    },
+    {
+      "id": "cognitive-offloading-deskilling",
+      "t": "Cognitive Offloading / Deskilling",
+      "c": "Business, Work & Careers",
+      "l": "P",
+      "s": "hot",
+      "d": "Relying on AI for thinking tasks, with the risk of losing skills that are no longer practised.",
+      "e": "Junior developers who never learn to debug."
+    },
+    {
+      "id": "agentic-organization",
+      "t": "Agentic Organization",
+      "c": "Business, Work & Careers",
+      "l": "P",
+      "s": "new",
+      "d": "A company redesigned around humans managing teams of AI agents, with work routed between people and agents.",
+      "e": "Each manager overseeing both staff and agents."
+    },
+    {
+      "id": "agent-boss",
+      "t": "Agent Boss",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "new",
+      "d": "A term (popularised by Microsoft) for employees who manage and direct AI agents as part of their job.",
+      "e": "A marketer running five content agents."
+    },
+    {
+      "id": "frontier-firm",
+      "t": "Frontier Firm",
+      "c": "Business, Work & Careers",
+      "l": "P",
+      "s": "new",
+      "d": "Microsoft's term for organisations built around human–agent teams, adopting AI deeply and early.",
+      "e": "Where every employee has agents working for them."
+    },
+    {
+      "id": "solopreneur",
+      "t": "Solopreneur",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "A one-person business, now far more capable with AI handling marketing, coding, support and operations.",
+      "e": "A consultant using agents for research and proposals."
+    },
+    {
+      "id": "citizen-developer",
+      "t": "Citizen Developer",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "est",
+      "d": "A non-programmer who builds apps and automations using no-code and AI tools.",
+      "e": "An HR manager building an onboarding agent."
+    },
+    {
+      "id": "no-code-low-code-automation",
+      "t": "No-Code / Low-Code Automation",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "est",
+      "d": "Visual tools that let people build workflows and AI agents with little or no programming.",
+      "e": "n8n, Zapier, Make, Power Automate."
+    },
+    {
+      "id": "automation-anxiety-fobo",
+      "t": "Automation Anxiety / FOBO",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "hot",
+      "d": "Worry about being replaced by AI. FOBO is 'fear of becoming obsolete'.",
+      "e": "Why reskilling budgets are growing."
+    },
+    {
+      "id": "reskilling-upskilling",
+      "t": "Reskilling / Upskilling",
+      "c": "Business, Work & Careers",
+      "l": "B",
+      "s": "est",
+      "d": "Training people for new roles (reskilling) or deeper skills in their current role (upskilling) as AI changes jobs.",
+      "e": "Teaching support staff to supervise AI agents."
+    },
+    {
+      "id": "agi-artificial-general-intelligence",
+      "t": "AGI (Artificial General Intelligence)",
+      "c": "Policy & Society",
+      "l": "B",
+      "s": "hot",
+      "d": "A hypothetical AI that matches or exceeds humans across nearly all intellectual tasks. There's no agreed definition or test, so treat headline timelines with caution.",
+      "e": "The stated goal of OpenAI, Google DeepMind and others."
+    },
+    {
+      "id": "asi-artificial-superintelligence",
+      "t": "ASI (Artificial Superintelligence)",
+      "c": "Policy & Society",
+      "l": "B",
+      "s": "hot",
+      "d": "AI vastly smarter than the best humans in virtually every domain. It remains hypothetical and is the focus of both big ambitions and big safety worries.",
+      "e": "Meta's 'Superintelligence Labs'."
+    },
+    {
+      "id": "singularity",
+      "t": "Singularity",
+      "c": "Policy & Society",
+      "l": "B",
+      "s": "est",
+      "d": "A hypothetical point where AI improvement becomes so rapid and self-reinforcing that the future becomes unpredictable.",
+      "e": "Ray Kurzweil's predicted 2045."
+    },
+    {
+      "id": "eu-ai-act",
+      "t": "EU AI Act",
+      "c": "Policy & Society",
+      "l": "P",
+      "s": "hot",
+      "d": "The European Union's comprehensive AI law, which classifies AI by risk level and phases in obligations from 2025 to 2027, including transparency rules and rules for general-purpose AI models.",
+      "e": "Chatbots must disclose that users are talking to AI."
+    },
+    {
+      "id": "ai-governance",
+      "t": "AI Governance",
+      "c": "Policy & Society",
+      "l": "P",
+      "s": "hot",
+      "d": "The policies, processes and controls an organisation or government uses to manage AI risks, accountability and compliance.",
+      "e": "An AI use policy plus an approved-tools list."
+    },
+    {
+      "id": "responsible-ai",
+      "t": "Responsible AI",
+      "c": "Policy & Society",
+      "l": "B",
+      "s": "est",
+      "d": "Developing and using AI in ways that are fair, transparent, safe, private and accountable.",
+      "e": "Bias testing before launching a hiring tool."
+    },
+    {
+      "id": "ai-act-risk-tiers",
+      "t": "AI Act Risk Tiers",
+      "c": "Policy & Society",
+      "l": "P",
+      "s": "est",
+      "d": "The EU framework's levels: unacceptable (banned), high-risk (strict rules), limited risk (transparency) and minimal risk.",
+      "e": "Social scoring is banned; CV screening is high-risk."
+    },
+    {
+      "id": "indiaai-mission",
+      "t": "IndiaAI Mission",
+      "c": "Policy & Society",
+      "l": "B",
+      "s": "hot",
+      "d": "India's national programme funding shared GPU compute, datasets, skilling and home-grown foundation models.",
+      "e": "Subsidised GPU access for Indian startups."
+    },
+    {
+      "id": "copyright-training-data",
+      "t": "Copyright & Training Data",
+      "c": "Policy & Society",
+      "l": "P",
+      "s": "hot",
+      "d": "The legal fight over whether training AI on copyrighted books, art, music and news without permission is fair use. Several major lawsuits and settlements are shaping the answer.",
+      "e": "Authors and publishers suing AI labs."
+    },
+    {
+      "id": "data-privacy-dpdp-gdpr",
+      "t": "Data Privacy (DPDP / GDPR)",
+      "c": "Policy & Society",
+      "l": "B",
+      "s": "est",
+      "d": "Laws governing how personal data can be collected and used, including in AI systems. India's DPDP Act and Europe's GDPR are key examples.",
+      "e": "Not sending customer PII to an unapproved model."
+    },
+    {
+      "id": "ai-companion",
+      "t": "AI Companion",
+      "c": "Policy & Society",
+      "l": "B",
+      "s": "hot",
+      "d": "Chatbots designed for friendship, emotional support or relationships. Growing fast, and prompting regulation especially to protect minors.",
+      "e": "Character.AI, Replika."
+    },
+    {
+      "id": "ai-psychosis",
+      "t": "AI Psychosis",
+      "c": "Policy & Society",
+      "l": "P",
+      "s": "new",
+      "d": "Informal term for cases where prolonged chatbot use appears to reinforce delusions or unhealthy beliefs in vulnerable users. It's not a clinical diagnosis.",
+      "e": "Why labs are adding wellbeing safeguards."
+    },
+    {
+      "id": "digital-divide-ai-divide",
+      "t": "Digital Divide / AI Divide",
+      "c": "Policy & Society",
+      "l": "B",
+      "s": "est",
+      "d": "The gap between people, companies and countries that can access and benefit from AI and those that can't.",
+      "e": "Local-language models to widen access in India."
+    },
+    {
+      "id": "post-labor-economics",
+      "t": "Post-Labor Economics",
+      "c": "Policy & Society",
+      "l": "A",
+      "s": "new",
+      "d": "Economic thinking about a future where AI and robots do most work, raising questions about income, meaning and distribution.",
+      "e": "Debates about universal basic income."
+    },
+    {
+      "id": "ai-arms-race",
+      "t": "AI Arms Race",
+      "c": "Policy & Society",
+      "l": "B",
+      "s": "hot",
+      "d": "Intense competition between companies and countries (notably the US and China) to lead in AI, sometimes at the expense of caution.",
+      "e": "Chip export controls and massive data-centre spending."
+    },
+    {
+      "id": "export-controls-ai-chips",
+      "t": "Export Controls (AI Chips)",
+      "c": "Policy & Society",
+      "l": "P",
+      "s": "hot",
+      "d": "Government restrictions on selling advanced AI chips and chipmaking tools to certain countries.",
+      "e": "US limits on NVIDIA chip sales to China."
+    },
+    {
+      "id": "ai-bubble",
+      "t": "AI Bubble",
+      "c": "Policy & Society",
+      "l": "B",
+      "s": "hot",
+      "d": "The debate over whether AI investment and valuations have outrun realistic returns, echoing the dot-com era.",
+      "e": "Trillions in data-centre spending vs today's revenue."
+    },
+    {
+      "id": "hype-cycle",
+      "t": "Hype Cycle",
+      "c": "Policy & Society",
+      "l": "B",
+      "s": "est",
+      "d": "Gartner's model of how technologies go from inflated expectations through disillusionment to real productivity.",
+      "e": "Where are agents on the hype cycle?"
+    },
+    {
+      "id": "openai",
+      "t": "OpenAI",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "The company behind ChatGPT, the GPT model family, Sora and Codex. Its ChatGPT launch in November 2022 kicked off the generative AI boom.",
+      "e": "ChatGPT has hundreds of millions of weekly users."
+    },
+    {
+      "id": "anthropic",
+      "t": "Anthropic",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "The AI safety-focused lab behind the Claude models, Claude Code and the Model Context Protocol.",
+      "e": "Claude is widely used for coding and enterprise work."
+    },
+    {
+      "id": "google-deepmind",
+      "t": "Google DeepMind",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "Google's AI lab, behind the Gemini models, AlphaFold, Veo and many foundational breakthroughs, including the transformer.",
+      "e": "AlphaFold won a share of the 2024 Nobel Prize in Chemistry."
+    },
+    {
+      "id": "meta-ai-llama",
+      "t": "Meta AI / Llama",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "Meta's AI efforts, including the Llama open-weight models, which popularised open models, plus assistants across WhatsApp, Instagram and Facebook.",
+      "e": "Meta AI inside WhatsApp."
+    },
+    {
+      "id": "xai-grok",
+      "t": "xAI / Grok",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "Elon Musk's AI company and its Grok models, integrated with X (Twitter).",
+      "e": "Grok answering questions on X."
+    },
+    {
+      "id": "mistral-ai",
+      "t": "Mistral AI",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "A leading European AI lab known for efficient open-weight and commercial models.",
+      "e": "Europe's flagship AI startup."
+    },
+    {
+      "id": "deepseek",
+      "t": "DeepSeek",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "hot",
+      "d": "A Chinese AI lab whose low-cost, open-weight reasoning models (R1, January 2025) shocked markets and showed frontier-level results at far lower training cost.",
+      "e": "The 'DeepSeek moment'."
+    },
+    {
+      "id": "qwen-alibaba",
+      "t": "Qwen (Alibaba)",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "hot",
+      "d": "Alibaba's family of open-weight models, among the most downloaded and fine-tuned open models worldwide.",
+      "e": "A common base for fine-tuned local models."
+    },
+    {
+      "id": "nvidia",
+      "t": "NVIDIA",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "The dominant maker of AI chips (GPUs) and the CUDA software platform, which made it one of the most valuable companies in the world.",
+      "e": "H100, B200 and newer GPUs."
+    },
+    {
+      "id": "cuda",
+      "t": "CUDA",
+      "c": "Ecosystem: Tools & Players",
+      "l": "A",
+      "s": "est",
+      "d": "NVIDIA's programming platform for GPUs. Its deep software ecosystem is a big part of NVIDIA's moat.",
+      "e": "Why switching away from NVIDIA is hard."
+    },
+    {
+      "id": "chatgpt",
+      "t": "ChatGPT",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "OpenAI's chatbot and assistant app: the product that brought generative AI to the mainstream.",
+      "e": "The fastest-growing consumer app in history at launch."
+    },
+    {
+      "id": "claude",
+      "t": "Claude",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "Anthropic's family of AI models and assistant, known for writing, coding and agentic work.",
+      "e": "Available in Opus, Sonnet and Haiku tiers."
+    },
+    {
+      "id": "gemini",
+      "t": "Gemini",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "Google's family of multimodal AI models and assistant, integrated across Search, Android and Workspace.",
+      "e": "Gemini in Gmail and Google Docs."
+    },
+    {
+      "id": "microsoft-copilot",
+      "t": "Microsoft Copilot",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "Microsoft's AI assistant brand across Windows, Office (Microsoft 365) and GitHub.",
+      "e": "Copilot drafting a Word document."
+    },
+    {
+      "id": "perplexity",
+      "t": "Perplexity",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "An AI-powered answer engine that searches the web and responds with cited answers.",
+      "e": "An alternative to traditional search."
+    },
+    {
+      "id": "langchain-langgraph",
+      "t": "LangChain / LangGraph",
+      "c": "Ecosystem: Tools & Players",
+      "l": "P",
+      "s": "est",
+      "d": "Popular open-source frameworks for building LLM apps: LangChain for chains and integrations, LangGraph for stateful, controllable agent workflows.",
+      "e": "Building a multi-agent system as a graph."
+    },
+    {
+      "id": "llamaindex",
+      "t": "LlamaIndex",
+      "c": "Ecosystem: Tools & Players",
+      "l": "P",
+      "s": "est",
+      "d": "An open-source framework focused on connecting LLMs to your data, used for RAG and document agents.",
+      "e": "Building a RAG pipeline over company PDFs."
+    },
+    {
+      "id": "crewai-autogen",
+      "t": "CrewAI / AutoGen",
+      "c": "Ecosystem: Tools & Players",
+      "l": "P",
+      "s": "est",
+      "d": "Frameworks for building multi-agent systems where role-based agents collaborate on tasks.",
+      "e": "A 'crew' of researcher, writer and editor agents."
+    },
+    {
+      "id": "openai-agents-sdk-google-adk-claude-agent-sdk",
+      "t": "OpenAI Agents SDK / Google ADK / Claude Agent SDK",
+      "c": "Ecosystem: Tools & Players",
+      "l": "P",
+      "s": "hot",
+      "d": "Official agent-building toolkits from the major labs, each providing tools, handoffs, guardrails and tracing.",
+      "e": "Building a support agent with the Agents SDK."
+    },
+    {
+      "id": "n8n",
+      "t": "n8n",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "hot",
+      "d": "A popular open-source workflow automation tool with visual AI-agent building, widely used by non-developers and agencies.",
+      "e": "Automating lead follow-up with an AI node."
+    },
+    {
+      "id": "ollama",
+      "t": "Ollama",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "hot",
+      "d": "A simple tool for downloading and running open-weight models locally on your own computer.",
+      "e": "'ollama run llama3' in one command."
+    },
+    {
+      "id": "cursor",
+      "t": "Cursor",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "hot",
+      "d": "An AI-first code editor with chat, multi-file edits and agents. It is one of the fastest-growing developer tools ever.",
+      "e": "Agent mode editing 20 files at once."
+    },
+    {
+      "id": "claude-code-codex",
+      "t": "Claude Code / Codex",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "hot",
+      "d": "Terminal- and cloud-based coding agents from Anthropic and OpenAI that work directly in your codebase.",
+      "e": "Delegating a whole feature from the command line."
+    },
+    {
+      "id": "midjourney",
+      "t": "Midjourney",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "A popular AI image generator known for its artistic, high-quality output.",
+      "e": "Concept art for a campaign."
+    },
+    {
+      "id": "elevenlabs",
+      "t": "ElevenLabs",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "est",
+      "d": "A leading AI voice company for text-to-speech, voice cloning, dubbing and voice agents.",
+      "e": "Audiobooks narrated by AI."
+    },
+    {
+      "id": "stargate",
+      "t": "Stargate",
+      "c": "Ecosystem: Tools & Players",
+      "l": "B",
+      "s": "hot",
+      "d": "A multi-hundred-billion-dollar US AI infrastructure project led by OpenAI with partners including Oracle and SoftBank, building massive data centres.",
+      "e": "Gigawatt-scale campuses in Texas and beyond."
+    }
+  ]
+}
